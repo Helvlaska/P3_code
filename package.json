@@ -1,0 +1,19 @@
+{
+  "name": "p3_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/sass/style.scss:./style/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helvlaska/P3_code.git"
+  },
+  "author": "Claire Castan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helvlaska/P3_code/issues"
+  },
+  "homepage": "https://github.com/Helvlaska/P3_code#readme"
+}

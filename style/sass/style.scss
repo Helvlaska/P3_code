@@ -1,1 +1,5 @@
-@import "../sass/Base/base.scss"
+@import "../sass/utils/variables";
+@import "../sass/utils/mixin";
+@import "../sass/base/base";
+@import "../sass/composants/header";
+@import "../sass/composants/footer";

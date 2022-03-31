@@ -1,0 +1,8 @@
+.header{
+    @include center-bloc;
+    padding: 20px;
+    &__logo{
+        width: 150px;
+    }
+
+}

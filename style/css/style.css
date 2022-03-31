@@ -1,5 +1,5 @@
 /*******MINI-RESET+BOX-SIZING*******/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,7 +58,6 @@ table {
 .map {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: #EAE6E9;
   padding: 10px 0px;
   color: #504e4e;
@@ -73,7 +72,6 @@ table {
 .explore {
   display: flex;
   justify-content: center;
-  width: 100%;
   flex-direction: column;
   text-align: center;
   background-color: #f2f2f299;
@@ -82,24 +80,33 @@ table {
 .explore__title {
   font-family: "Roboto";
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 10px;
 }
 .explore__text {
   font-family: "Roboto";
   font-weight: 100;
+  margin-bottom: 15px;
 }
 
 .accueil-header {
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: 20px;
   margin-bottom: 3px;
   box-shadow: 0px 1px 5px 0px grey;
 }
 .accueil-header__logo {
   width: 150px;
+}
+
+.explore__button {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0px 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

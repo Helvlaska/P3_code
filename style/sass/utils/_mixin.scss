@@ -1,5 +1,11 @@
 @mixin center-bloc{
     display:flex;
     justify-content:center;
-    width:100%;
+}
+@mixin violet-btn {
+    color: white;
+    background: linear-gradient($rose, $violet);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
 }

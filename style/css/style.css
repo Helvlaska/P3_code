@@ -1,4 +1,5 @@
 /*******MINI-RESET+BOX-SIZING*******/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,13 +61,33 @@ table {
   width: 100%;
   background-color: #EAE6E9;
   padding: 10px 0px;
-  color: #767676;
+  color: #504e4e;
   font-size: 14px;
   font-weight: bold;
 }
 .map__city {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   margin-left: 1%;
+}
+
+.explore {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f2f2f299;
+  padding: 20px;
+}
+.explore__title {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.explore__text {
+  font-family: "Roboto";
+  font-weight: 100;
 }
 
 .accueil-header {

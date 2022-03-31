@@ -3,9 +3,24 @@
     justify-content:center;
 }
 @mixin violet-btn {
-    color: white;
+    font-family:'Roboto';
+    color: $blanc;
     background: linear-gradient($rose, $violet);
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
+}
+@mixin violet-numb {
+    border-radius: 20px;
+    color: $blanc;
+    background-color: $violet;
+    padding: 2px 6px;
+    width: 20px;
+    height: 20px;
+}
+@mixin h2-title {
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
 }

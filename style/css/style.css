@@ -73,20 +73,63 @@ table {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: "Roboto";
   text-align: center;
   background-color: #f2f2f299;
   padding: 20px;
 }
 .explore__title {
-  font-family: "Roboto";
   font-size: 30px;
   font-weight: 900;
   margin-bottom: 10px;
 }
 .explore__text {
-  font-family: "Roboto";
   font-weight: 100;
   margin-bottom: 15px;
+}
+
+.tutorial {
+  padding: 20px;
+}
+.tutorial__title {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.tutorial .tuto-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.tutorial .tuto-container__numb {
+  font-family: "Roboto";
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  padding: 2px 6px;
+  width: 20px;
+  height: 20px;
+  margin: 14px 0px;
+  z-index: 1;
+}
+.tutorial .tuto-container .card {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  border-radius: 10px;
+  padding: 15px 50px 15px 15px;
+  background-color: #f5f2f2;
+  box-shadow: 3px 3px 6px -1px lightgrey;
+  margin-left: -10px;
+  color: #504e4e;
+}
+.tutorial .tuto-container .card__text {
+  font-family: "Roboto";
+  font-weight: bold;
+  margin-left: 5px;
+}
+.tutorial .tuto-container .card__icon--violet {
+  color: #9356DC;
 }
 
 .accueil-header {
@@ -101,7 +144,8 @@ table {
 }
 
 .explore__button {
-  color: white;
+  font-family: "Roboto";
+  color: #FFFFFF;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 20px;

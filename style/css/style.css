@@ -54,11 +54,27 @@ table {
   box-sizing: border-box;
 }
 
+.map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #EAE6E9;
+  padding: 10px 0px;
+  color: #767676;
+  font-size: 14px;
+  font-weight: bold;
+}
+.map__city {
+  font-family: "Roboto", sans-serif;
+  margin-left: 1%;
+}
+
 .accueil-header {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 20px;
+  margin-bottom: 3px;
   box-shadow: 0px 1px 5px 0px grey;
 }
 .accueil-header__logo {

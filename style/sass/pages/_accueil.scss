@@ -1,0 +1,12 @@
+.map {
+    @include center-bloc;
+    background-color:#EAE6E9;
+    padding:10px 0px;
+    color:#767676;
+    font-size: 14px;
+    font-weight: bold;
+    &__city{
+        font-family:'Roboto', sans-serif;
+        margin-left:1%;
+    }
+}

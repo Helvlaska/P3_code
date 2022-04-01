@@ -142,8 +142,63 @@ table {
 
 .accueil-menu {
   background-color: #f2f2f299;
+  padding: 30px 20px 0px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+.accueil-menu__title {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.accueil-menu .card {
+  background-color: #FFFFFF;
+  width: 320px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px -1px lightgrey;
+  margin-bottom: 20px;
+}
+.accueil-menu .card .card-illus {
+  display: flex;
+}
+.accueil-menu .card .card-illus__img {
+  z-index: 2;
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.accueil-menu .card .card-illus__new {
+  z-index: 1;
+  width: 70px;
+  height: 26px;
+  color: green;
+  background-color: #99E2D0;
+  margin: 25px 0px 0px -90px;
+  padding: 5px;
+}
+
+.accueil-menu-describ {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 15px 15px;
+}
+
+.accueil-menu-describ-text {
+  font-family: "Roboto";
+}
+.accueil-menu-describ-text__title {
+  font-family: "Roboto";
+  color: #000000;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.accueil-menu-describ-text__icon {
+  padding: 2px 8px;
+  font-size: 25px;
 }
 
 .accueil-header {

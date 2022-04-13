@@ -1,0 +1,18 @@
+.explore {
+    @include center-bloc;
+    flex-direction:column;
+    font-family:'Roboto';
+    text-align:center;
+    background-color:$gris-bkg;
+    padding:20px;
+    &__title {
+        font-size:30px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-weight: 400;
+        color:$gris-typo;
+        margin-bottom: 15px;
+    }
+}

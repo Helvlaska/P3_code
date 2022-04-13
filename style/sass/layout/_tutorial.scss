@@ -1,0 +1,44 @@
+.tutorial {
+    padding:20px;
+    &__title {
+       @include h2-title;
+    }
+    .tuto-container{
+        display:flex;
+        margin-bottom: 20px;
+        &__numb {
+            font-family:'Roboto';
+            font-size: 13px;
+            border-radius: 20px;
+            color: $blanc;
+            background-color: $violet;
+            padding: 3px 6px;
+            width: 20px;
+            height: 20px;
+            margin: 23px 0px;
+            z-index: 1;
+        }
+        .card {
+            display: flex;
+            justify-content:space-around;
+            align-items: baseline;
+            width:95%;
+            border-radius: 10px;
+            padding: 25px 50px 25px 15px;
+            background-color: $gris-bkg;
+            box-shadow: 3px 3px 6px -1px lightgrey;
+            margin-left: -10px;
+            color:$gris-typo;
+            &__text {
+                @include h4-title;
+                margin-left: 5px;
+            }
+            &__icon--gris {
+                color:$gris-typo;
+            }
+            &__icon--violet {
+                color:$violet;
+            }
+        }
+    }
+}

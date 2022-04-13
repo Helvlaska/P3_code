@@ -1,13 +1,21 @@
 footer {
-    background-color:$noir;
+    background-color:$gris-footer;
     color:$blanc;
     font-family:'Roboto';
+    padding:20px;
     h4 {
         font-family: 'Shrikhand';
-        font-size: 16px;
+        font-size: 18px;
+        margin-bottom: 20px;
     }
     ul {
         list-style:none;
+    }
+    li {
+        margin-bottom:10px;
+        i {
+            margin-right:5px;
+        }
     }
     li a {
         text-decoration: none;

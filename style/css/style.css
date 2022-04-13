@@ -63,15 +63,16 @@ table {
   margin: 0px 70px;
 }
 
+.logo {
+  width: 150px;
+}
+
 .accueil-header {
   display: flex;
   justify-content: center;
   padding: 20px;
   margin-bottom: 3px;
-  box-shadow: 0px 1px 5px 0px grey;
-}
-.accueil-header__logo {
-  width: 150px;
+  box-shadow: 0px 3px 7px 0px #cfcfcf;
 }
 
 .menu-header {
@@ -82,13 +83,12 @@ table {
 }
 .menu-header__logo {
   justify-content: center;
-  width: 150px;
 }
 
 .map {
   display: flex;
   justify-content: center;
-  background-color: #EAE6E9;
+  background-color: #eaeaea;
   padding: 10px 0px;
   color: #504e4e;
   font-size: 14px;

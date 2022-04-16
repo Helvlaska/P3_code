@@ -1,4 +1,5 @@
 .tutorial {
+    @include bp ("sm") {
     padding:20px;
     &__title {
        @include h2-title;
@@ -40,4 +41,5 @@
             }
         }
     }
+}
 }

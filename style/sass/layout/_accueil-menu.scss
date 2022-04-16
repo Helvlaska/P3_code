@@ -1,9 +1,10 @@
-.accueil-menu {
+#accueil-menu {
+    @include bp ("sm") {
     background-color:$lightgrey-bkg;
     padding: 30px 20px 0px 20px;
     display: flex;
     flex-direction: column;
-    &__title {
+    .accueil-menu__title {
         @include h2-title;
     }
     .card {
@@ -33,13 +34,17 @@
             }
         }
     }
+    }
 }
 .accueil-menu-describ {
+    @include bp ("sm") {
     display:flex;
     justify-content: space-between;
     padding: 15px 20px 15px 15px;
+    }
 }
 .accueil-menu-describ-text{
+    @include bp ("sm") {
     font-family: 'Roboto';
     &__title {
         @include h4-title;
@@ -71,5 +76,6 @@
             -webkit-text-fill-color: transparent;
             
         }
+    }
     }
 }

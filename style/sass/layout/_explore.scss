@@ -1,4 +1,5 @@
 .explore {
+    @include bp ("sm") {
     @include center-bloc;
     flex-direction:column;
     font-family:'Roboto';
@@ -14,5 +15,6 @@
         font-weight: 400;
         color:$gris-noir;
         margin-bottom: 15px;
+    }
     }
 }

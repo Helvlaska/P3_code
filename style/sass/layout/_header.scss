@@ -8,11 +8,13 @@
 }
 
 .menu-header {
+    @include bp ("sm") {
     display:flex;
     padding: 20px;
     margin-bottom: 3px;
     box-shadow: 0px 1px 5px 0px grey;
-    &__logo{
+    &__logo {
         justify-content:center;
+    }
     }
 }

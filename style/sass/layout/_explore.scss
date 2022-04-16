@@ -3,7 +3,7 @@
     flex-direction:column;
     font-family:'Roboto';
     text-align:center;
-    background-color:$gris-bkg;
+    background-color:$lightgrey-bkg;
     padding:20px;
     &__title {
         font-size:30px;
@@ -12,7 +12,7 @@
     }
     &__text {
         font-weight: 400;
-        color:$gris-typo;
+        color:$gris-noir;
         margin-bottom: 15px;
     }
 }

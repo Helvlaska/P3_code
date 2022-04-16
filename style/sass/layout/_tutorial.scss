@@ -25,16 +25,15 @@
             width:95%;
             border-radius: 10px;
             padding: 25px 50px 25px 15px;
-            background-color: $gris-bkg;
+            background-color: $lightgrey-bkg;
             box-shadow: 3px 3px 6px -1px lightgrey;
-            margin-left: -10px;
-            color:$gris-typo;
+            color:$gris-noir;
             &__text {
                 @include h4-title;
                 margin-left: 5px;
             }
             &__icon--gris {
-                color:$gris-typo;
+                color:$gris-noir;
             }
             &__icon--violet {
                 color:$violet;

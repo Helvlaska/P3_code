@@ -1,5 +1,5 @@
 .accueil-menu {
-    background-color:$gris-bkg;
+    background-color:$lightgrey-bkg;
     padding: 30px 20px 0px 20px;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
         width:320px;
         height:auto;
         border-radius: 15px;
-        box-shadow: 3px 3px 6px -1px lightgrey;
+        box-shadow: 3px 3px 6px -1px $box-shadow_card;
         margin-bottom: 20px;
         .card-illus {
             display:flex;
@@ -26,7 +26,7 @@
                 z-index: 1;
                 width: 70px;
                 height: 26px;
-                color: green;
+                color: $vert;
                 background-color: $mint;
                 margin: 25px 0px 0px -90px;
                 padding: 5px;

@@ -42,3 +42,9 @@
     color:$noir;
     font-weight: bold;
 }
+
+@mixin violet_pc {
+    @if (a:hover) {
+      --hover: color (violet)
+    }
+  }

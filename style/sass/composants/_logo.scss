@@ -1,3 +1,12 @@
 .logo {
     width: 150px;
 }
+
+@mixin logo-sm {
+    position: absolute;
+    left: 30%;
+}
+@mixin logo-lg {
+    position: absolute;
+    left: 45%;
+}

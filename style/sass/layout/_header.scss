@@ -25,6 +25,9 @@
         .logo {
             @include logo-lg;
         }
+        .return {
+            margin-top: 5px;
+        }
     }
     @include bp ("sm") {
         .logo {

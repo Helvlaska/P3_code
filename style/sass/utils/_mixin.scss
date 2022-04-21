@@ -9,8 +9,6 @@
     color: $blanc;
     background: linear-gradient($rose, $violet);
     border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
 }
 
 
@@ -48,3 +46,15 @@
       --hover: color (violet)
     }
   }
+
+@mixin coeur-bloc {
+    padding: 2px 8px;
+    font-size: 25px;
+}
+@mixin coeur-violet {
+    background: linear-gradient(to top, $violet 0%,$rose 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

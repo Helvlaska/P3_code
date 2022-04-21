@@ -1,19 +1,37 @@
+@mixin form-bloc {
+    display: flex;
+    font-family:"Roboto";
+    font-size: 14px;
+    font-weight: bold;
+}
+@mixin form-style {
+    color:$gris-noir;
+    background-color:$bkg-form;
+}
+
 form {
+    @include bp ("lg") {
+       @include form-bloc;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        @include form-style;
+        input {
+            @include form-bloc;
+            width:120px;
+            text-align: center;
+            border: none;
+            @include form-style;
+        }
+    }
     @include bp ("sm") {
-        @include center-bloc;
-        font-size: 14px;
-        font-weight: bold;
-        color:$gris-noir;
-        background-color:$bkg-form;
+        position: inherit;
+        justify-content:center;
+        width:100%;
         padding:10px 0px;
         input {
-            width: 120px;
-            font-family:"Roboto";
-            font-size: 14px;
-            font-weight: bold;
-            color:$gris-noir;
-            background-color:$bkg-form;
-            border: none;
             margin-left: 7px;
         }
     }

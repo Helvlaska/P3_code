@@ -112,24 +112,40 @@ table {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
   form {
     display: flex;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #353535;
-    background-color: #eaeaea;
-    padding: 10px 0px;
-  }
-  form input {
-    width: 120px;
     font-family: "Roboto";
     font-size: 14px;
     font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
     color: #353535;
     background-color: #eaeaea;
+  }
+  form input {
+    display: flex;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
     border: none;
+    color: #353535;
+    background-color: #eaeaea;
+  }
+}
+@media screen and (max-width: 768px) {
+  form {
+    position: inherit;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  form input {
     margin-left: 7px;
   }
 }

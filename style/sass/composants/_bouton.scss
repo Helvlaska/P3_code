@@ -14,3 +14,9 @@
         @include coeur-violet;   
     }
 }
+
+.button {
+    @include violet-btn;
+    border-radius: 30px;
+    padding: 15px 45px;
+}

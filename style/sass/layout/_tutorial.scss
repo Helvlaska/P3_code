@@ -1,49 +1,52 @@
 .tutorial {
-    @include bp ("sm") {
-        @include violet_pc; 
+    @include bp ("lg") { 
+        @include ligne-bloc;
+        list-style: none;
         padding:20px;
         &__title {
             @include h2-title;
+            width: 100%
+        }
+        li {
+            width:30%;
         }
         .tuto-container {
             display:flex;
             width: 100%;
             margin-bottom: 20px;
             text-decoration: none;
-            &__numb {
+            .numb {
                 font-family:"Roboto";
                 font-size: 13px;
-                border-radius: 20px;
-                color: $blanc;
-                background-color: $violet;
-                padding: 3px 6px;
-                width: 20px;
-                height: 20px;
+                position: absolute;
                 margin: 23px 0px;
-                z-index: 2;
-                text-decoration: none;
+                @include violet-numb;
             }
             .card {
                 display: flex;
                 align-items: baseline;
-                width:95%;
-                border-radius: 10px;
                 padding: 25px 50px 25px 27px;
-                background-color: $lightgrey-bkg;
-                box-shadow: 3px 3px 6px -1px $box-shadow_card;
+                margin-left: 10px;
+                @include style-card--grey;
                 color: $gris-noir;
-                z-index: 1;
-                &__text {
+                
+                .text {
                     @include h4-title;
                     margin-left: 30px;
                     text-decoration: none;
                 }
-                &__icon {
-                    color:$gris-noir;
+                .icon {
                     width: 20px;
                     text-decoration: none;
+                    color:$gris-noir;
                 }
             }
+        }
+    }
+    @include bp ("sm") {
+        flex-wrap: wrap;
+        li {
+            width: 100%;
         }
     }
 }

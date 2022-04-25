@@ -1,7 +1,8 @@
 $breakpoints: (
-  "sm": 768px,
+    "sm": 768px,
   "md": 992px,
   "lg": 1400px,
+    
 );
 
 @mixin bp($breakpoint) {
@@ -13,3 +14,6 @@ $breakpoints: (
         }
     }
 }
+/*"sm": 360px,
+    "md": 768px,
+    "lg": 992px,*/

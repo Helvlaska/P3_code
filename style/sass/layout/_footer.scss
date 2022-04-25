@@ -1,5 +1,4 @@
 footer {
-    @include bp ("sm") {
     background-color:$gris-noir;
     color:$blanc;
     font-family:'Roboto';
@@ -21,6 +20,5 @@ footer {
     li a {
         text-decoration: none;
         color:$blanc;
-    }
     }
 }

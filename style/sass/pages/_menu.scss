@@ -2,7 +2,6 @@
     width: 100%;
     background-color: $lightgrey-bkg;
     padding-bottom: 30px;
-    
     &__title {
         position: absolute;
         top: 232px;
@@ -31,22 +30,19 @@
     }
     .plat {
         font-family: 'Roboto';
-       padding: 20px;
-       &__title {
-        width: 23px;
-        font-size: 18px;
-        border-bottom: 5px solid $mint;
-        margin-bottom: 5%;
+        padding: 20px;
+        &__title {
+            width: 23px;
+            font-size: 18px;
+            border-bottom: 5px solid $mint;
+            margin-bottom: 5%;
         }
     }
     .card { 
         display: flex;
         justify-content: space-between;
-        border-radius: 14px;
         padding: 15px;
-        background-color: $blanc;
-        box-shadow: 3px 3px 6px -1px $box-shadow_card;
-        margin-bottom: 5%;
+        @include style-card--blanc;
         &__check {
             display: none;
         }
@@ -70,9 +66,4 @@
     justify-content:center;
     text-decoration: none;
     margin: 20px auto;
-    .button {
-        @include violet-btn;
-        border-radius: 30px;
-        padding: 15px 45px;
-    }
 }

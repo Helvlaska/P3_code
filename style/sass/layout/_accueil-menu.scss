@@ -1,34 +1,44 @@
 #accueil-menu {
-    @include bp ("sm") {
-    background-color:$lightgrey-bkg;
-    padding: 30px 20px 0px 20px;
-    display: flex;
-    flex-direction: column;
-    .accueil-menu__title {
-        @include h2-title;
+    @include bp ("lg") {
+        @include ligne-bloc;
+        background-color:$lightgrey-bkg;
+        .accueil-menu__title {
+            @include h2-title;
+            width:100%;
+        }
+        .card {
+            @include style-card--blanc;
+            margin: 20px;
+        }
     }
-    .card {
-        background-color:$blanc;
-        width:335px;
-        height:auto;
-        border-radius: 15px;
-        box-shadow: 3px 3px 6px -1px $box-shadow_card;
-        margin-bottom: 20px;
-        .card-illus {
-            display:flex;
-            &__new {
-                z-index: 1;
-                width: 70px;
-                height: 26px;
-                color: $vert;
-                background-color: $mint;
-                margin: 25px 0px 0px -90px;
-                padding: 5px;
+    @include bp ("sm") {
+        background-color:$lightgrey-bkg;
+        padding: 30px 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        .accueil-menu__title {
+            @include h2-title;
+        }
+        .card {
+            @include style-card--blanc;
+            width:100%;
+            .card-illus {
+                display:flex;
+                width: 100%;
+                &__new {
+                    z-index: 1;
+                    width: 70px;
+                    height: 26px;
+                    color: $vert;
+                    background-color: $mint;
+                    margin: 25px 0px 0px -90px;
+                    padding: 5px;
+                }
             }
         }
     }
-    }
 }
+
 .accueil-menu-describ {
     @include bp ("sm") {
     display:flex;
@@ -43,13 +53,10 @@
         @include h4-title;
         margin-bottom:5px;
     }
-    .coeur-vide {
-        font-size:25px;
-        z-index:1;
-        margin-right: -37px;
-    }
-    .coeur-plein {
-        
-    }
+        .coeur-vide {
+            font-size:25px;
+            z-index:1;
+            margin-right: -37px;
+        }
     }
 }

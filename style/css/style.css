@@ -1,3 +1,6 @@
+/*"sm": 360px,
+    "md": 768px,
+    "lg": 992px,*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,6 +85,15 @@ table {
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.button {
+  font-family: "Roboto";
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 45px;
 }
 
 .logo {
@@ -180,10 +192,38 @@ table {
   }
 }
 
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1400px) {
+  .explore {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-family: "Roboto";
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 20px;
+  }
+  .explore__title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .explore__text {
+    font-weight: 400;
+    color: #353535;
+    margin-bottom: 15px;
+  }
+}
 @media screen and (max-width: 768px) {
   .explore {
     display: flex;
     justify-content: center;
+    width: 100%;
     flex-direction: column;
     font-family: "Roboto";
     text-align: center;
@@ -202,9 +242,34 @@ table {
   }
 }
 
-@media screen and (max-width: 768px) {
+/*.explore {
+    @include bp ("lg") {
+        @include center-bloc;
+        flex-direction:column;
+        width: 50%;
+        font-family:'Roboto';
+        text-align:center;
+        background-color:$lightgrey-bkg;
+        padding:20px;
+        &__title {
+            font-size:30px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-weight: 400;
+            color:$gris-noir;
+            margin-bottom: 15px;
+        }
+    }
+}*/
+@media screen and (max-width: 1400px) {
   .tutorial {
-    --hover: color (violet) ;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
     padding: 20px;
   }
   .tutorial__title {
@@ -212,6 +277,10 @@ table {
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 20px;
+    width: 100%;
+  }
+  .tutorial li {
+    width: 30%;
   }
   .tutorial .tuto-container {
     display: flex;
@@ -219,31 +288,30 @@ table {
     margin-bottom: 20px;
     text-decoration: none;
   }
-  .tutorial .tuto-container__numb {
+  .tutorial .tuto-container .numb {
     font-family: "Roboto";
     font-size: 13px;
+    position: absolute;
+    margin: 23px 0px;
     border-radius: 20px;
     color: #FFFFFF;
     background-color: #9356DC;
     padding: 3px 6px;
     width: 20px;
     height: 20px;
-    margin: 23px 0px;
-    z-index: 2;
-    text-decoration: none;
   }
   .tutorial .tuto-container .card {
     display: flex;
     align-items: baseline;
-    width: 95%;
-    border-radius: 10px;
     padding: 25px 50px 25px 27px;
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 10px;
     background-color: #f6f6f6;
     box-shadow: 3px 3px 6px -1px #e6e6e6;
     color: #353535;
-    z-index: 1;
   }
-  .tutorial .tuto-container .card__text {
+  .tutorial .tuto-container .card .text {
     font-family: "Roboto";
     font-size: 15px;
     color: #000000;
@@ -251,13 +319,44 @@ table {
     margin-left: 30px;
     text-decoration: none;
   }
-  .tutorial .tuto-container .card__icon {
-    color: #353535;
+  .tutorial .tuto-container .card .icon {
     width: 20px;
     text-decoration: none;
+    color: #353535;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tutorial {
+    flex-wrap: wrap;
+  }
+  .tutorial li {
+    width: 100%;
   }
 }
 
+@media screen and (max-width: 1400px) {
+  #accueil-menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  #accueil-menu .accueil-menu__title {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #accueil-menu .card {
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 6px -1px #e6e6e6;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    margin: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   #accueil-menu {
     background-color: #f6f6f6;
@@ -273,14 +372,14 @@ table {
   }
   #accueil-menu .card {
     background-color: #FFFFFF;
-    width: 335px;
-    height: auto;
-    border-radius: 15px;
     box-shadow: 3px 3px 6px -1px #e6e6e6;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    width: 100%;
   }
   #accueil-menu .card .card-illus {
     display: flex;
+    width: 100%;
   }
   #accueil-menu .card .card-illus__new {
     z-index: 1;
@@ -319,31 +418,29 @@ table {
   }
 }
 
-@media screen and (max-width: 768px) {
-  footer {
-    background-color: #353535;
-    color: #FFFFFF;
-    font-family: "Roboto";
-    padding: 20px;
-  }
-  footer h4 {
-    font-family: "Shrikhand";
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  footer ul {
-    list-style: none;
-  }
-  footer li {
-    margin-bottom: 10px;
-  }
-  footer li i {
-    margin-right: 5px;
-  }
-  footer li a {
-    text-decoration: none;
-    color: #FFFFFF;
-  }
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  padding: 20px;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer li i {
+  margin-right: 5px;
+}
+footer li a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .menu {
@@ -392,11 +489,11 @@ table {
 .menu .card {
   display: flex;
   justify-content: space-between;
-  border-radius: 14px;
   padding: 15px;
   background-color: #FFFFFF;
   box-shadow: 3px 3px 6px -1px #e6e6e6;
   margin-bottom: 5%;
+  border-radius: 15px;
 }
 .menu .card__check {
   display: none;
@@ -420,14 +517,6 @@ table {
   justify-content: center;
   text-decoration: none;
   margin: 20px auto;
-}
-.send .button {
-  font-family: "Roboto";
-  color: #FFFFFF;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: none;
-  border-radius: 30px;
-  padding: 15px 45px;
 }
 
 /*# sourceMappingURL=style.css.map */

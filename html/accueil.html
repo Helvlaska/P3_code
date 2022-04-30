@@ -13,118 +13,117 @@
     </head>
     <body>
         <div id="bloc-page">
-            <header class="accueil-header">
-                <img class="logo" src="../images/logo/ohmyfood.png" alt="Ohmyfood"/>
+            <header>
+                <img src="../images/logo/ohmyfood.png" alt="Ohmyfood"/>
             </header>
             <form>
                 <label for="search"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" id="search" name="city" value="Paris,Belleville">
             </form>
-            <section class="presentation">
-                <div class="explore">
-                    <h1 class="explore__title">Réservez le menu qui vous convient</h1>
-                    <p class="explore__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <a href="#accueil-menu"><button class="explore__button">Explorer nos restaurants</button></a>
-                </div>
-                <ul class="tutorial">
-                    <h2 class="tutorial__title">Fonctionnement</h2>
+            <section id="explore">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <a href="#accueil-menu"><button>Explorer nos restaurants</button></a>
+            </section>
+            <section id="tutorial">
+                <ul>
+                    <h2>Fonctionnement</h2>
                     <li>
-                      <a href="#" class="tuto-container">
-                        <p class="numb">1</p>
-                        <div class="card">
-                          <i class="fas fa-mobile-alt tuto-icon tuto-icon--hover"></i>
-                          <h4 class="text">Choisissez un restaurant</h4>
+                      <a href="#">
+                        <p>1</p>
+                        <div>
+                          <i class="fas fa-mobile-alt"></i>
+                          <h4>Choisissez un restaurant</h4>
                         </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="tuto-container">
-                        <p class="numb">2</p>
-                        <div class="card">
-                          <i class="fas fa-mobile-alt tuto-icon tuto-icon--hover"></i>
-                          <h4 class="text">Composez votre menu</h4>
+                      <a href="#">
+                        <p>2</p>
+                        <div>
+                          <i class="fas fa-bars"></i>
+                          <h4>Composez votre menu</h4>
                         </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="tuto-container">
-                        <p class="numb">3</p>
-                        <div class="card">
-                          <i class="fas fa-store tuto-icon tuto-icon--hover"></i>
-                          <h4 class="text">Dégustez au restaurant</h4>
+                      <a href="#">
+                        <p>3</p>
+                        <div>
+                          <i class="fas fa-store"></i>
+                          <h4>Dégustez au restaurant</h4>
                         </div>
                       </a>
                     </li>
                 </ul>
             </section>
             <section id="accueil-menu">
-                <h2 class="accueil-menu__title">Restaurants</h2>
-                <div class="card">
-                    <div class="card-illus">
-                        <a href="menu/menu_1.html"><img class="img-card" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant"/></a>
-                        <p class="card-illus__new">Nouveau</p>
-                    </div>
-                    <div class="accueil-menu-describ">
-                        <div class="accueil-menu-describ-text">
-                            <h4 class="accueil-menu-describ-text__title">La palette du goût</h4>
-                            <p class="accueil-menu-describ-text__text">Ménilmontant</p>
-                        </div>
+              <ul>
+                <h2>Restaurants</h2>
+                <li>
+                    <a href="menu/menu_1.html"><img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant"/></a>
+                    <p class="bloc-new bloc-new--first">Nouveau</p>
+                    <div class="describ">
                         <div>
+                            <h4>La palette du goût</h4>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <label class="coeur">
+                            <input type="checkbox"/>
                             <i class="far fa-heart coeur-vide"></i>
                             <i class="fas fa-heart coeur-plein"></i>
-                        </div>
+                        </label>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-illus">
-                        <a href="menu/menu_2.html"><img class="img-card" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant"/></a>
-                        <p class="card-illus__new">Nouveau</p>
-                    </div>
-                    <div class="accueil-menu-describ">
-                        <div class="accueil-menu-describ-text">
-                            <h4 class="accueil-menu-describ-text__title">La note enchantée</h4>
-                            <p class="accueil-menu-describ-text__text">Charonne</p>
-                        </div>
+                </li>
+                <li>
+                    <a href="menu/menu_2.html"><img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant"/></a>
+                    <p class="bloc-new bloc-new--second">Nouveau</p>
+                    <div class="describ">
                         <div>
+                            <h4>La note enchantée</h4>
+                            <p>Charonne</p>
+                        </div>
+                        <label class="coeur">
+                            <input type="checkbox"/>
                             <i class="far fa-heart coeur-vide"></i>
                             <i class="fas fa-heart coeur-plein"></i>
-                        </div>
+                        </label>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-illus">
-                        <a href="menu/menu_3.html"><img class="img-card" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant"/></a>
-                    </div>
-                    <div class="accueil-menu-describ">
-                        <div class="accueil-menu-describ-text">
-                            <h4 class="accueil-menu-describ-text__title">A la française</h4>
-                            <p class="accueil-menu-describ-text__text">Cité Rouge</p>
-                        </div>
+                </li>
+                <li>
+                    <a href="menu/menu_3.html"><img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant"/></a>
+                    <div class="describ">
                         <div>
+                            <h4>A la française</h4>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <label class="coeur">
+                            <input type="checkbox"/>
                             <i class="far fa-heart coeur-vide"></i>
                             <i class="fas fa-heart coeur-plein"></i>
-                        </div>
+                        </label>
                     </div>
-                </div>
-                <div class="card">
-                    <a href="menu/menu_4.html" class="card-illus"><img class="img-card" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant"/></a>
-                    <div class="accueil-menu-describ">
-                        <div class="accueil-menu-describ-text">
-                            <h4 class="accueil-menu-describ-text__title">Le délice des sens</h4>
-                            <p class="accueil-menu-describ-text__text">Folie-Méricourt</p>
-                        </div>
+                </li>
+                <li>
+                    <a href="menu/menu_4.html"><img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant"/></a>
+                    <div class="describ">
                         <div>
+                            <h4>Le délice des sens</h4>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <label class="coeur">
+                            <input type="checkbox"/>
                             <i class="far fa-heart coeur-vide"></i>
                             <i class="fas fa-heart coeur-plein"></i>
-                        </div>
+                        </label>
                     </div>
-                </div>
+                </li>
             </section>
-            <footer class="accueil-footer">
-                <h4 class="accueil-footer__title">Ohmyfood</h4>
-                <ul class="accueil-footer__list">
-                    <li><a href="#"><i class="fas fa-utensils accueil-footer__icon"></i> Proposer un restaurant</a></li>
-                    <li><a href="#"><i class="fas fa-hands-helping accueil-footer__icon"></i> Devenir partenaire</a></li>
+            <footer>
+                <h4>Ohmyfood</h4>
+                <ul>
+                    <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>    

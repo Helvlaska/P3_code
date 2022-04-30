@@ -2,7 +2,6 @@
     display:flex;
     justify-content:center;
 }
-
 @mixin ligne-bloc {
     display: flex;
     justify-content: space-around;
@@ -48,11 +47,6 @@
     font-weight: bold;
 }
 
-@mixin violet_pc {
-    @if (a:hover) {
-      --hover: color (violet)
-    }
-  }
 
 @mixin coeur-bloc {
     padding: 2px 8px;
@@ -65,6 +59,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 @mixin style-card--blanc {
     background-color: $blanc;

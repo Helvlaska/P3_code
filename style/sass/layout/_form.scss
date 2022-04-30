@@ -1,38 +1,30 @@
 @mixin form-bloc {
     display: flex;
-    font-family:"Roboto";
-    font-size: 14px;
-    font-weight: bold;
+    justify-content:center;
+    width:100%;
 }
 @mixin form-style {
     color:$gris-noir;
     background-color:$bkg-form;
 }
+@mixin form-font {
+    font-family:"Roboto";
+    font-size: 13px;
+    font-weight: bold;
+}
 
 form {
-    @include bp ("lg") {
-       @include form-bloc;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 5px 20px;
-        border-radius: 5px;
-        @include form-style;
-        input {
-            @include form-bloc;
-            width:120px;
-            text-align: center;
-            border: none;
-            @include form-style;
-        }
+    @include form-bloc;
+    padding: 5px 0px;
+    @include form-style;
+    label {
+        font-size: 13px;
     }
-    @include bp ("sm") {
-        position: inherit;
-        justify-content:center;
-        width:100%;
-        padding:10px 0px;
-        input {
-            margin-left: 7px;
-        }
+    input {
+        width:120px;
+        border: none;
+        @include form-font;
+        text-align: center;
+        @include form-style;
     }
 }

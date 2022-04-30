@@ -72,21 +72,6 @@ table {
   padding: 10px 15px;
 }
 
-.coeur-plein:hover {
-  background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.coeur-plein:active {
-  background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .button {
   font-family: "Roboto";
   color: #FFFFFF;
@@ -94,10 +79,6 @@ table {
   border: none;
   border-radius: 30px;
   padding: 15px 45px;
-}
-
-.logo {
-  width: 150px;
 }
 
 .img-card {
@@ -112,32 +93,23 @@ table {
   width: 100%;
 }
 
-@media screen and (max-width: 1400px) {
-  .accueil-header {
-    display: flex;
-    width: 100%;
-    height: 60px;
-    padding: 20px;
-    margin-bottom: 3px;
-  }
+header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  margin-bottom: 3px;
+  box-shadow: 0px 3px 7px 0px #cfcfcf;
 }
-@media screen and (max-width: 768px) {
-  .accueil-header {
-    box-shadow: 0px 3px 7px 0px #cfcfcf;
-  }
-  .accueil-header .logo {
-    position: absolute;
-    left: 30%;
-  }
+header img {
+  width: 180px;
 }
 
 @media screen and (max-width: 1400px) {
   .menu-header {
     display: flex;
     width: 100%;
-    height: 60px;
     padding: 20px;
-    margin-bottom: 3px;
   }
   .menu-header .logo {
     position: absolute;
@@ -154,117 +126,57 @@ table {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  form {
-    display: flex;
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 5px 20px;
-    border-radius: 5px;
-    color: #353535;
-    background-color: #eaeaea;
-  }
-  form input {
-    display: flex;
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: bold;
-    width: 120px;
-    text-align: center;
-    border: none;
-    color: #353535;
-    background-color: #eaeaea;
-  }
-}
-@media screen and (max-width: 768px) {
-  form {
-    position: inherit;
-    justify-content: center;
-    width: 100%;
-    padding: 10px 0px;
-  }
-  form input {
-    margin-left: 7px;
-  }
-}
-
-.presentation {
+form {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px;
+  color: #353535;
+  background-color: #eaeaea;
+}
+form label {
+  font-size: 13px;
+}
+form input {
+  width: 120px;
+  border: none;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  color: #353535;
+  background-color: #eaeaea;
+}
+
+#explore {
+  width: 100%;
+  font-family: "Roboto";
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px;
+}
+#explore h1 {
+  font-size: 23px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#explore p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #353535;
+  margin-bottom: 15px;
+}
+#explore button {
+  font-family: "Roboto";
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
 }
 
 @media screen and (max-width: 1400px) {
-  .explore {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    font-family: "Roboto";
-    text-align: center;
-    background-color: #f6f6f6;
-    padding: 20px;
-  }
-  .explore__title {
-    font-size: 30px;
-    font-weight: 900;
-    margin-bottom: 10px;
-  }
-  .explore__text {
-    font-weight: 400;
-    color: #353535;
-    margin-bottom: 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .explore {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-    font-family: "Roboto";
-    text-align: center;
-    background-color: #f6f6f6;
-    padding: 20px;
-  }
-  .explore__title {
-    font-size: 30px;
-    font-weight: 900;
-    margin-bottom: 10px;
-  }
-  .explore__text {
-    font-weight: 400;
-    color: #353535;
-    margin-bottom: 15px;
-  }
-}
-
-/*.explore {
-    @include bp ("lg") {
-        @include center-bloc;
-        flex-direction:column;
-        width: 50%;
-        font-family:'Roboto';
-        text-align:center;
-        background-color:$lightgrey-bkg;
-        padding:20px;
-        &__title {
-            font-size:30px;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-        &__text {
-            font-weight: 400;
-            color:$gris-noir;
-            margin-bottom: 15px;
-        }
-    }
-}*/
-@media screen and (max-width: 1400px) {
-  .tutorial {
+  #tutorial {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -272,23 +184,32 @@ table {
     list-style: none;
     padding: 20px;
   }
-  .tutorial__title {
+  #tutorial ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #tutorial h2 {
     font-family: "Roboto";
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 20px;
     width: 100%;
   }
-  .tutorial li {
+  #tutorial li {
     width: 30%;
   }
-  .tutorial .tuto-container {
+  #tutorial a {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
     text-decoration: none;
   }
-  .tutorial .tuto-container .numb {
+  #tutorial a:hover i, #tutorial a:focus i {
+    color: #9356DC;
+  }
+  #tutorial p {
     font-family: "Roboto";
     font-size: 13px;
     position: absolute;
@@ -300,7 +221,7 @@ table {
     width: 20px;
     height: 20px;
   }
-  .tutorial .tuto-container .card {
+  #tutorial div {
     display: flex;
     align-items: baseline;
     padding: 25px 50px 25px 27px;
@@ -311,7 +232,7 @@ table {
     box-shadow: 3px 3px 6px -1px #e6e6e6;
     color: #353535;
   }
-  .tutorial .tuto-container .card .text {
+  #tutorial h4 {
     font-family: "Roboto";
     font-size: 15px;
     color: #000000;
@@ -319,17 +240,14 @@ table {
     margin-left: 30px;
     text-decoration: none;
   }
-  .tutorial .tuto-container .card .icon {
+  #tutorial i {
     width: 20px;
     text-decoration: none;
     color: #353535;
   }
 }
 @media screen and (max-width: 768px) {
-  .tutorial {
-    flex-wrap: wrap;
-  }
-  .tutorial li {
+  #tutorial li {
     width: 100%;
   }
 }
@@ -340,81 +258,118 @@ table {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    flex-wrap: wrap;
     background-color: #f6f6f6;
+    padding: 30px 20px;
   }
-  #accueil-menu .accueil-menu__title {
+  #accueil-menu ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #accueil-menu h2 {
     font-family: "Roboto";
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 20px;
     width: 100%;
   }
-  #accueil-menu .card {
+  #accueil-menu li {
+    width: 35%;
     background-color: #FFFFFF;
     box-shadow: 3px 3px 6px -1px #e6e6e6;
     margin-bottom: 5%;
     border-radius: 15px;
-    margin: 20px;
   }
-}
-@media screen and (max-width: 768px) {
-  #accueil-menu {
-    background-color: #f6f6f6;
-    padding: 30px 20px 0px 20px;
+  #accueil-menu li a {
+    width: 100%;
     display: flex;
-    flex-direction: column;
   }
-  #accueil-menu .accueil-menu__title {
+  #accueil-menu li img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  #accueil-menu li .bloc-new {
+    width: fit-content;
     font-family: "Roboto";
-    font-size: 20px;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-  #accueil-menu .card {
-    background-color: #FFFFFF;
-    box-shadow: 3px 3px 6px -1px #e6e6e6;
-    margin-bottom: 5%;
-    border-radius: 15px;
-    width: 100%;
-  }
-  #accueil-menu .card .card-illus {
-    display: flex;
-    width: 100%;
-  }
-  #accueil-menu .card .card-illus__new {
-    z-index: 1;
-    width: 70px;
-    height: 26px;
+    font-size: 15px;
+    font-weight: bold;
     color: #008766;
     background-color: #99E2D0;
-    margin: 25px 0px 0px -90px;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 2px;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .accueil-menu-describ {
+  #accueil-menu li .bloc-new--first {
+    position: absolute;
+    bottom: 4%;
+    right: 59%;
+  }
+  #accueil-menu li .bloc-new--second {
+    position: absolute;
+    bottom: 4%;
+    right: 11%;
+  }
+  #accueil-menu li .describ {
     display: flex;
     justify-content: space-between;
     padding: 15px 20px 15px 15px;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .accueil-menu-describ-text {
+  #accueil-menu li .describ div {
     font-family: "Roboto";
   }
-  .accueil-menu-describ-text__title {
+  #accueil-menu li .describ div h4 {
     font-family: "Roboto";
-    font-size: 15px;
-    color: #000000;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
   }
-  .accueil-menu-describ-text .coeur-vide {
-    font-size: 25px;
-    z-index: 1;
-    margin-right: -37px;
+  #accueil-menu li .describ .coeur {
+    font-size: 23px;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  #accueil-menu li .describ .coeur input[type=checkbox], #accueil-menu li .describ .coeur .coeur-plein {
+    display: none;
+  }
+  #accueil-menu li .describ .coeur input[type=checkbox]:checked ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #accueil-menu li .describ .coeur input[type=checkbox]:hover ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #accueil-menu li .describ .coeur input[type=checkbox]:checked ~ .coeur-vide {
+    display: none;
+  }
+  #accueil-menu li .describ .coeur input[type=checkbox]:hover ~ .coeur-vide {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #accueil-menu li {
+    width: 100%;
+  }
+  #accueil-menu li .bloc-new--first {
+    top: 113%;
+    bottom: auto;
+    left: 68%;
+  }
+  #accueil-menu li .bloc-new--second {
+    top: 151%;
+    bottom: auto;
+    right: 11%;
   }
 }
 

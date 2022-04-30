@@ -1,24 +1,18 @@
 @mixin header-bloc {
     display: flex;
     width: 100%;
-    height: 60px;
     padding: 20px;
+}
+
+header {
+    @include header-bloc;
+    justify-content: center;
     margin-bottom: 3px;
-}
-
-.accueil-header {
-    @include bp ("lg") {
-        @include header-bloc;
+    box-shadow: 0px 3px 7px 0px $box-shadow_header;
+    img {
+        width: 180px;
     }
-    @include bp ("sm") {
-        box-shadow: 0px 3px 7px 0px $box-shadow_header;
-        .logo {
-            @include logo-sm;
-        }
-    }   
 }
-
-
 .menu-header {
     @include bp ("lg") {
         @include header-bloc;

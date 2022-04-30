@@ -6,15 +6,6 @@
 
 }
 
-.coeur-plein {
-    &:hover {
-        @include coeur-violet;    
-    }
-    &:active {
-        @include coeur-violet;   
-    }
-}
-
 .button {
     @include violet-btn;
     border-radius: 30px;

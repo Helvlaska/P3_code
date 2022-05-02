@@ -8,54 +8,59 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-        }
-        h2 {
-            @include h2-title;
-            width: 100%
-        }
-        li {
-            width:30%;
-        }
-        a {
-            display:flex;
-            width: 100%;
-            margin-bottom: 20px;
-            text-decoration: none;
-            &:hover, &:focus {
-                i {
-                    color: $violet;
+            h3 {
+                font-family:'Roboto';
+                font-size: 20px;
+                font-weight: 900;
+                margin-bottom: 20px;
+                width: 100%
+            }
+            .card {
+                width:30%;
+                a {
+                    display:flex;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    text-decoration: none;
+                    &:hover, &:focus {
+                        i {
+                            color: $violet;
+                        }
+                    }
+                    p {
+                    font-family:"Roboto";
+                    font-size: 13px;
+                    position: absolute;
+                    margin: 23px 0px;
+                    @include violet-numb;
+                    }
+                    div {
+                        display: flex;
+                        align-items: baseline;
+                        padding: 25px 0px 25px 27px;
+                        margin-left: 10px;
+                        @include style-card--grey;
+                        color: $gris-noir;
+                        h4 {
+                            @include h4-title;
+                            margin-left: 30px;
+                            text-decoration: none;
+                        }
+                        i {
+                            width: 20px;
+                            text-decoration: none;
+                            color:$gris-noir;
+                        }
+                    }
                 }
             }
         }
-        p {
-            font-family:"Roboto";
-            font-size: 13px;
-            position: absolute;
-            margin: 23px 0px;
-            @include violet-numb;
-        }
-        div {
-            display: flex;
-            align-items: baseline;
-            padding: 25px 50px 25px 27px;
-            margin-left: 10px;
-            @include style-card--grey;
-            color: $gris-noir;
-        }
-        h4 {
-            @include h4-title;
-            margin-left: 30px;
-            text-decoration: none;
-        }
-        i {
-            width: 20px;
-            text-decoration: none;
-            color:$gris-noir;
-        }
     }
     @include bp ("sm") {
-        li {
-            width: 100%;
-        }
+        ul {
+            .card {
+                width: 100%;
+            }
+        } 
     }
 }

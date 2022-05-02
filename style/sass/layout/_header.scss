@@ -14,14 +14,13 @@ header {
     }
 }
 .menu-header {
-    @include bp ("lg") {
-        @include header-bloc;
-        .logo {
-            @include logo-lg;
-        }
-        .return {
-            margin-top: 5px;
-        }
+    @include header-bloc;
+    img {
+        width: 180px;
+    }
+    .return {
+        margin-top: 5px;
+    }
     }
     @include bp ("sm") {
         .logo {

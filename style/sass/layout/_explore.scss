@@ -5,22 +5,12 @@
     background-color:$lightgrey-bkg;
     padding:40px;
     h2 {
-        font-size:23px;
-        font-weight: 900;
-        margin-bottom: 10px;
+        @include h2;
     }
     p {
         font-size: 14px;
         font-weight: 400;
         color:$gris-noir;
         margin-bottom: 15px;
-    }
-    button {
-        @include violet-btn;
-        border-radius: 20px;
-        padding: 10px 15px;
-        &:hover {
-            cursor: pointer;
-        }
     }
 }

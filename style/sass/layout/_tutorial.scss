@@ -8,13 +8,6 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            h3 {
-                font-family:'Roboto';
-                font-size: 20px;
-                font-weight: 900;
-                margin-bottom: 20px;
-                width: 100%
-            }
             .card {
                 width:30%;
                 a {
@@ -42,7 +35,7 @@
                         @include style-card--grey;
                         color: $gris-noir;
                         h4 {
-                            @include h4-title;
+                            @include h4;
                             margin-left: 30px;
                             text-decoration: none;
                         }

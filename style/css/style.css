@@ -1,18 +1,562 @@
-/* Error: unmatched "}".
- *    ,
- * 30 | }
- *    | ^
- *    '
- *   style\sass\layout\_header.scss 30:1  @import
- *   style\sass\style.scss 13:9           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a    \2577 \a 30 \2502  }\a    \2502  ^\a    \2575 \a   style\\sass\\layout\\_header.scss 30:1  @import\a   style\\sass\\style.scss 13:9           root stylesheet';
+/*"sm": 360px,
+    "md": 768px,
+    "lg": 992px,*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  width: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#bloc-page {
+  max-width: 1400px;
+  margin: auto;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1400px) {
+  * {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #header_menu .return {
+    position: relative;
+    right: 40%;
+    top: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header_menu .return {
+    right: 20%;
+  }
+}
+
+#explore button {
+  font-family: "Roboto";
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+#explore button:hover {
+  cursor: pointer;
+}
+
+/*.explore__button {
+    @include violet-btn;
+    margin: 0px 70px;
+    border-radius: 20px;
+    padding: 10px 15px;
+
+}
+
+.button {
+    @include violet-btn;
+    border-radius: 30px;
+    padding: 15px 45px;
+}*/
+.img-card {
+  z-index: 2;
+  width: 335px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.img-bloc {
+  width: 100%;
+}
+
+#header_accueil {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 3px;
+  box-shadow: 0px 3px 7px 0px #cfcfcf;
+}
+#header_accueil img {
+  width: 180px;
+}
+
+#header_menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#header_menu img {
+  width: 180px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px;
+  color: #353535;
+  background-color: #eaeaea;
+}
+form label {
+  font-size: 13px;
+}
+form input {
+  width: 120px;
+  border: none;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  color: #353535;
+  background-color: #eaeaea;
+}
+
+#explore {
+  width: 100%;
+  font-family: "Roboto";
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px;
+}
+#explore h2 {
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 900;
+}
+#explore p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #353535;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  #tutorial {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+  }
+  #tutorial ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #tutorial ul .card {
+    width: 30%;
+  }
+  #tutorial ul .card a {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  #tutorial ul .card a:hover i, #tutorial ul .card a:focus i {
+    color: #9356DC;
+  }
+  #tutorial ul .card a p {
+    font-family: "Roboto";
+    font-size: 13px;
+    position: absolute;
+    margin: 23px 0px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #9356DC;
+    padding: 3px 6px;
+    width: 20px;
+    height: 20px;
+  }
+  #tutorial ul .card a div {
+    display: flex;
+    align-items: baseline;
+    padding: 25px 0px 25px 27px;
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    box-shadow: 3px 3px 6px -1px #e6e6e6;
+    color: #353535;
+  }
+  #tutorial ul .card a div h4 {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 30px;
+    text-decoration: none;
+  }
+  #tutorial ul .card a div i {
+    width: 20px;
+    text-decoration: none;
+    color: #353535;
+  }
+}
+@media screen and (max-width: 768px) {
+  #tutorial ul .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #accueil-menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+    padding: 30px 20px;
+  }
+  #accueil-menu ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #accueil-menu ul h3 {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 900;
+    width: 100%;
+  }
+  #accueil-menu ul li {
+    width: 35%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 6px -1px #e6e6e6;
+    margin-bottom: 5%;
+    border-radius: 15px;
+  }
+  #accueil-menu ul li .illus {
+    display: inline-flex;
+    justify-content: end;
+    width: 100%;
+    height: 170px;
+    text-decoration: none;
+    border-radius: 15px 15px 0px 0px;
+    background-size: cover;
+    background-position: center;
+  }
+  #accueil-menu ul li .illus_one {
+    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  }
+  #accueil-menu ul li .illus_two {
+    background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  }
+  #accueil-menu ul li .illus_tree {
+    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  }
+  #accueil-menu ul li .illus_four {
+    background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  }
+  #accueil-menu ul li .illus .bloc-new {
+    width: fit-content;
+    height: fit-content;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+    color: #008766;
+    background-color: #99E2D0;
+    padding: 8px;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  #accueil-menu ul li .describ {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 15px 15px;
+  }
+  #accueil-menu ul li .describ h4 {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #accueil-menu ul li .describ p {
+    font-family: "Roboto";
+  }
+  #accueil-menu ul li .coeur {
+    font-size: 23px;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  #accueil-menu ul li .coeur input[type=checkbox], #accueil-menu ul li .coeur .coeur-plein {
+    display: none;
+  }
+  #accueil-menu ul li .coeur input[type=checkbox]:checked ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #accueil-menu ul li .coeur input[type=checkbox]:hover ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #accueil-menu ul li .coeur input[type=checkbox]:checked ~ .coeur-vide {
+    display: none;
+  }
+  #accueil-menu ul li .coeur input[type=checkbox]:hover ~ .coeur-vide {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #accueil-menu ul li {
+    width: 100%;
+  }
+  #accueil-menu ul li .bloc-new--first {
+    top: 113%;
+    bottom: auto;
+    left: 68%;
+  }
+  #accueil-menu ul li .bloc-new--second {
+    top: 151%;
+    bottom: auto;
+    right: 11%;
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  padding: 20px;
+}
+footer h5 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer li i {
+  margin-right: 5px;
+}
+footer li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1400px) {
+  #menu .illus {
+    width: 100%;
+    height: 230px;
+    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #menu .titre {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 35px 35px 0px 35px;
+    border-radius: 35px 35px 0px 0px;
+    background-color: #f6f6f6;
+    z-index: 1;
+    margin-top: -30px;
+  }
+  #menu .titre h1 {
+    font-family: "Shrikhand";
+    font-size: 35px;
+  }
+  #menu .titre .coeur {
+    font-size: 35px;
+    cursor: pointer;
+  }
+  #menu .titre .coeur input[type=checkbox], #menu .titre .coeur .coeur-plein {
+    display: none;
+  }
+  #menu .titre .coeur input[type=checkbox]:checked ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #menu .titre .coeur input[type=checkbox]:hover ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #menu .titre .coeur input[type=checkbox]:checked ~ .coeur-vide {
+    display: none;
+  }
+  #menu .titre .coeur input[type=checkbox]:hover ~ .coeur-vide {
+    display: none;
+  }
+  #menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  #menu ul .choice {
+    display: flex;
+    width: 33%;
+    background-color: #f6f6f6;
+    padding: 30px;
+  }
+  #menu ul .choice h5 {
+    font-family: "Roboto";
+    font-size: 20px;
+    border-bottom: 4px solid #99E2D0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    width: 30px;
+  }
+  #menu ul .choice .card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 13px;
+    margin: 10px 0px;
+  }
+  #menu ul .choice .card .menu_describ {
+    padding: 15px;
+  }
+  #menu ul .choice .card .menu_describ h4 {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #menu ul .choice .card .check {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+  }
+  #menu ul .choice .card .check h4 {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #menu ul .choice .card .checked {
+    display: flex;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    background-color: #99E2D0;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+    padding-top: 10px;
+  }
+  #menu ul .choice .card .unchecked {
+    margin-right: 10px;
+  }
+  #menu ul .choice .card .check input[type=checkbox], #menu ul .choice .card .checked {
+    display: none;
+  }
+  #menu ul .choice .card .check input[type=checkbox]:hover ~ .checked {
+    display: inline-block;
+  }
+  #menu ul .choice .card .check input[type=checkbox]:hover ~ .unchecked {
+    padding-top: 14px;
+    margin-right: 10px;
+  }
+  #menu ul .choice .card .check input[type=checkbox]:checked ~ .checked {
+    display: inline-block;
+  }
+  #menu ul .choice .card .check input[type=checkbox]:checked ~ .unchecked {
+    padding-top: 14px;
+    margin-right: 10px;
+  }
+  #menu .send {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 30px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #menu .titre h1 {
+    font-size: 25px;
+  }
+  #menu .titre .coeur {
+    font-size: 25px;
+  }
+  #menu ul .choice {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

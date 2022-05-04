@@ -1,4 +1,29 @@
-.explore__button {
+#header_menu {
+    @include bp ("lg") {
+        .return {
+            position: relative;
+            right: 40%;
+            top: 8px;
+        }
+    }
+    @include bp ("sm") {
+        .return {
+            right: 20%;
+        }
+    }
+}
+
+#explore {
+    button {
+        @include violet-btn;
+        border-radius: 20px;
+        padding: 10px 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+/*.explore__button {
     @include violet-btn;
     margin: 0px 70px;
     border-radius: 20px;
@@ -10,4 +35,5 @@
     @include violet-btn;
     border-radius: 30px;
     padding: 15px 45px;
-}
+}*/
+

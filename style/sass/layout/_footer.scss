@@ -3,9 +3,8 @@ footer {
     color:$blanc;
     font-family:'Roboto';
     padding:20px;
-    h4 {
-        font-family: 'Shrikhand';
-        font-size: 18px;
+    h5 {
+        @include h5;
         margin-bottom: 20px;
     }
     ul {

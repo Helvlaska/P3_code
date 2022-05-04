@@ -1,30 +1,20 @@
-@mixin header-bloc {
+#header_accueil {
     display: flex;
+    justify-content: center;
     width: 100%;
     padding: 20px;
-}
-
-header {
-    @include header-bloc;
-    justify-content: center;
     margin-bottom: 3px;
     box-shadow: 0px 3px 7px 0px $box-shadow_header;
     img {
         width: 180px;
     }
 }
-.menu-header {
-    @include header-bloc;
+#header_menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
     img {
         width: 180px;
-    }
-    .return {
-        margin-top: 5px;
-    }
-    }
-    @include bp ("sm") {
-        .logo {
-            @include logo-sm;
-        }
-    }
+    }   
 }

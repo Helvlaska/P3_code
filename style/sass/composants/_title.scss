@@ -1,0 +1,27 @@
+@mixin h1 {
+    font-family: 'Shrikhand';
+    font-size: 35px;
+}
+@mixin h2 {
+    font-family: 'Roboto';
+    font-size:23px;
+    font-weight: 900;
+}
+@mixin h3 {
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: 900;
+}
+@mixin h4 {
+    font-family:'Roboto';
+    font-size:15px;
+    font-weight: bold;
+}
+@mixin h5 {
+    font-family: 'Shrikhand';
+    font-size: 18px;
+}
+@mixin h6 {
+    font-family: 'Roboto';
+    font-size: 20px;
+}

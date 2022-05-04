@@ -14,26 +14,28 @@
     <body>
         <div id="bloc-page">
             <header>
-                <img src="../images/logo/ohmyfood.png" alt="Ohmyfood"/>
+                <div id="header_accueil">
+                    <img src="../images/logo/ohmyfood.png" alt="Ohmyfood"/>
+                </div>
             </header>
             <form>
                 <label for="search"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" id="search" name="city" value="Paris,Belleville">
             </form>
             <section id="explore">
-                    <h2>Réservez le menu qui vous convient</h2>
+                    <h2 class="explore__title">Réservez le menu qui vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                     <a href="#accueil-menu"><button>Explorer nos restaurants</button></a>
             </section>
             <section id="tutorial">
                 <ul>
-                    <h3>Fonctionnement</h3>
+                    <h3 class="tutorial__title">Fonctionnement</h3>
                     <li class="card">
                       <a href="#">
                         <p>1</p>
                         <div>
                           <i class="fas fa-mobile-alt"></i>
-                          <h4>Choisissez un restaurant</h4>
+                          <h4 class="card__title">Choisissez un restaurant</h4>
                         </div>
                       </a>
                     </li>
@@ -42,7 +44,7 @@
                         <p>2</p>
                         <div>
                           <i class="fas fa-bars"></i>
-                          <h4>Composez votre menu</h4>
+                          <h4 class="card__title">Composez votre menu</h4>
                         </div>
                       </a>
                     </li>
@@ -51,7 +53,7 @@
                         <p>3</p>
                         <div>
                           <i class="fas fa-store"></i>
-                          <h4>Dégustez au restaurant</h4>
+                          <h4 class="card__title">Dégustez au restaurant</h4>
                         </div>
                       </a>
                     </li>
@@ -59,14 +61,14 @@
             </section>
             <section id="accueil-menu">
               <ul>
-                <h3>Restaurants</h3>
+                <h3 class="accueil-menu__title">Restaurants</h3>
                 <li>
                     <a href="menu/menu_1.html" class="illus illus_one">
                         <p class="bloc-new">Nouveau</p>
                     </a>
                     <div class="describ">
                         <div>
-                            <h4>La palette du goût</h4>
+                            <h4 class="describ__title">La palette du goût</h4>
                             <p>Ménilmontant</p>
                         </div>
                         <label class="coeur">
@@ -82,7 +84,7 @@
                     </a>
                     <div class="describ">
                         <div>
-                            <h4>La note enchantée</h4>
+                            <h4 class="describ__title">La note enchantée</h4>
                             <p>Charonne</p>
                         </div>
                         <label class="coeur">
@@ -96,7 +98,7 @@
                     <a href="menu/menu_3.html" class="illus illus_tree"></a>
                     <div class="describ">
                         <div>
-                            <h4>A la française</h4>
+                            <h4 class="describ__title">A la française</h4>
                             <p>Cité Rouge</p>
                         </div>
                         <label class="coeur">
@@ -110,7 +112,7 @@
                     <a href="menu/menu_4.html" class="illus illus_four"></a>
                     <div class="describ">
                         <div>
-                            <h4>Le délice des sens</h4>
+                            <h4 class="describ__title">Le délice des sens</h4>
                             <p>Folie-Méricourt</p>
                         </div>
                         <label class="coeur">
@@ -122,7 +124,7 @@
                 </li>
             </section>
             <footer>
-                <h4>Ohmyfood</h4>
+                <h5>Ohmyfood</h5>
                 <ul>
                     <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
                     <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>

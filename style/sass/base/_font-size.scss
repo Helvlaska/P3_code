@@ -1,0 +1,8 @@
+* {
+    @include bp ("lg"){
+        font-size: 18px;
+    }
+    @include bp ("sm"){
+        font-size: 16px;
+    }
+}

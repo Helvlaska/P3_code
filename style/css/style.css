@@ -98,29 +98,65 @@ table {
   cursor: pointer;
 }
 
-/*.explore__button {
-    @include violet-btn;
-    margin: 0px 70px;
-    border-radius: 20px;
-    padding: 10px 15px;
-
-}
-
-.button {
-    @include violet-btn;
-    border-radius: 30px;
-    padding: 15px 45px;
-}*/
-.img-card {
-  z-index: 2;
-  width: 335px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img-bloc {
+#send {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  background-color: #f6f6f6;
+  padding: 30px 0px;
+}
+#send button {
+  font-family: "Roboto";
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+#send button:hover {
+  cursor: pointer;
+}
+
+.image {
+  display: inline-flex;
+  justify-content: end;
+  width: 100%;
+  height: 170px;
+  text-decoration: none;
+  border-radius: 15px 15px 0px 0px;
+  background-size: cover;
+  background-position: center;
+}
+.image_one {
+  background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.image_two {
+  background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.image_tree {
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.image_four {
+  background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.illus {
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+.illus_one {
+  background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.illus_two {
+  background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.illus_tree {
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.illus_four {
+  background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 #header_accueil {
@@ -284,29 +320,7 @@ form input {
     margin-bottom: 5%;
     border-radius: 15px;
   }
-  #accueil-menu ul li .illus {
-    display: inline-flex;
-    justify-content: end;
-    width: 100%;
-    height: 170px;
-    text-decoration: none;
-    border-radius: 15px 15px 0px 0px;
-    background-size: cover;
-    background-position: center;
-  }
-  #accueil-menu ul li .illus_one {
-    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  }
-  #accueil-menu ul li .illus_two {
-    background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  }
-  #accueil-menu ul li .illus_tree {
-    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  }
-  #accueil-menu ul li .illus_four {
-    background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  }
-  #accueil-menu ul li .illus .bloc-new {
+  #accueil-menu ul li .bloc-new {
     width: fit-content;
     height: fit-content;
     font-family: "Roboto";
@@ -406,69 +420,21 @@ footer li a {
 }
 
 @media screen and (max-width: 1400px) {
-  #menu .illus {
-    width: 100%;
-    height: 230px;
-    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  #menu .titre {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 35px 35px 0px 35px;
-    border-radius: 35px 35px 0px 0px;
-    background-color: #f6f6f6;
-    z-index: 1;
-    margin-top: -30px;
-  }
-  #menu .titre h1 {
-    font-family: "Shrikhand";
-    font-size: 35px;
-  }
-  #menu .titre .coeur {
-    font-size: 35px;
-    cursor: pointer;
-  }
-  #menu .titre .coeur input[type=checkbox], #menu .titre .coeur .coeur-plein {
-    display: none;
-  }
-  #menu .titre .coeur input[type=checkbox]:checked ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #menu .titre .coeur input[type=checkbox]:hover ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #menu .titre .coeur input[type=checkbox]:checked ~ .coeur-vide {
-    display: none;
-  }
-  #menu .titre .coeur input[type=checkbox]:hover ~ .coeur-vide {
-    display: none;
-  }
-  #menu ul {
+  #menu {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     background-color: #f6f6f6;
   }
-  #menu ul .choice {
+  #menu .choice {
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     width: 33%;
     background-color: #f6f6f6;
     padding: 30px;
   }
-  #menu ul .choice h5 {
+  #menu .choice h5 {
     font-family: "Roboto";
     font-size: 20px;
     border-bottom: 4px solid #99E2D0;
@@ -476,7 +442,7 @@ footer li a {
     padding-bottom: 5px;
     width: 30px;
   }
-  #menu ul .choice .card {
+  #menu .choice .card {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -488,27 +454,27 @@ footer li a {
     font-size: 13px;
     margin: 10px 0px;
   }
-  #menu ul .choice .card .menu_describ {
+  #menu .choice .card .menu_describ {
     padding: 15px;
   }
-  #menu ul .choice .card .menu_describ h4 {
+  #menu .choice .card .menu_describ h4 {
     font-family: "Roboto";
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 5px;
   }
-  #menu ul .choice .card .check {
+  #menu .choice .card .check {
     display: flex;
     height: 100%;
     align-items: center;
     cursor: pointer;
   }
-  #menu ul .choice .card .check h4 {
+  #menu .choice .card .check h4 {
     font-family: "Roboto";
     font-size: 15px;
     font-weight: bold;
   }
-  #menu ul .choice .card .checked {
+  #menu .choice .card .checked {
     display: flex;
     width: 40px;
     height: 100%;
@@ -519,43 +485,84 @@ footer li a {
     border-radius: 0px 10px 10px 0px;
     padding-top: 10px;
   }
-  #menu ul .choice .card .unchecked {
+  #menu .choice .card .unchecked {
     margin-right: 10px;
   }
-  #menu ul .choice .card .check input[type=checkbox], #menu ul .choice .card .checked {
+  #menu .choice .card .check input[type=checkbox], #menu .choice .card .checked {
     display: none;
   }
-  #menu ul .choice .card .check input[type=checkbox]:hover ~ .checked {
+  #menu .choice .card .check input[type=checkbox]:hover ~ .checked {
     display: inline-block;
   }
-  #menu ul .choice .card .check input[type=checkbox]:hover ~ .unchecked {
+  #menu .choice .card .check input[type=checkbox]:hover ~ .unchecked {
     padding-top: 14px;
     margin-right: 10px;
   }
-  #menu ul .choice .card .check input[type=checkbox]:checked ~ .checked {
+  #menu .choice .card .check input[type=checkbox]:checked ~ .checked {
     display: inline-block;
   }
-  #menu ul .choice .card .check input[type=checkbox]:checked ~ .unchecked {
+  #menu .choice .card .check input[type=checkbox]:checked ~ .unchecked {
     padding-top: 14px;
     margin-right: 10px;
-  }
-  #menu .send {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #f6f6f6;
-    padding: 30px 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  #menu .titre h1 {
-    font-size: 25px;
-  }
-  #menu .titre .coeur {
-    font-size: 25px;
-  }
-  #menu ul .choice {
+  #menu .choice {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #banniere {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 35px 35px 0px 35px;
+    border-radius: 35px 35px 0px 0px;
+    background-color: #f6f6f6;
+    z-index: 1;
+    margin-top: -30px;
+  }
+  #banniere h1 {
+    font-family: "Shrikhand";
+    font-size: 35px;
+  }
+  #banniere .coeur {
+    font-size: 35px;
+    cursor: pointer;
+  }
+  #banniere .coeur input[type=checkbox], #banniere .coeur .coeur-plein {
+    display: none;
+  }
+  #banniere .coeur input[type=checkbox]:checked ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #banniere .coeur input[type=checkbox]:hover ~ .coeur-plein {
+    display: inline-block;
+    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #banniere .coeur input[type=checkbox]:checked ~ .coeur-vide {
+    display: none;
+  }
+  #banniere .coeur input[type=checkbox]:hover ~ .coeur-vide {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #banniere h1 {
+    font-size: 25px;
+  }
+  #banniere .coeur {
+    font-size: 25px;
   }
 }
 

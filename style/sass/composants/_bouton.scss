@@ -23,17 +23,21 @@
         }
     }
 }
-/*.explore__button {
-    @include violet-btn;
-    margin: 0px 70px;
-    border-radius: 20px;
-    padding: 10px 15px;
 
+#send {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $lightgrey-bkg;
+    padding: 30px 0px;
+    button {
+        @include violet-btn;
+        border-radius: 20px;
+        padding: 10px 25px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
-.button {
-    @include violet-btn;
-    border-radius: 30px;
-    padding: 15px 45px;
-}*/
 

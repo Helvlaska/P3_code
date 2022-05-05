@@ -1,0 +1,44 @@
+#banniere {
+    @include bp ("lg") {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 35px 35px 0px 35px;
+        border-radius: 35px 35px 0px 0px;
+        background-color:$lightgrey-bkg;
+        z-index:1;
+        margin-top: -30px;
+        h1 {
+            @include h1;
+        }
+        .coeur {
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .coeur input[type="checkbox"],.coeur .coeur-plein {
+            display: none;
+        }
+        .coeur input[type="checkbox"]:checked ~ .coeur-plein {
+            display: inline-block;
+            @include coeur-violet;
+        }
+        .coeur input[type="checkbox"]:hover ~ .coeur-plein {
+            display: inline-block;
+            @include coeur-violet;
+        }
+        .coeur input[type="checkbox"]:checked ~ .coeur-vide {
+            display: none;
+        }
+        .coeur input[type="checkbox"]:hover ~ .coeur-vide {
+            display: none;
+        }
+    }
+    @include bp ("sm") {
+        h1 {
+            font-size: 25px,
+        }
+        .coeur {
+            font-size: 25px;
+        }
+    }
+}

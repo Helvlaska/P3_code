@@ -1,0 +1,87 @@
+#menu {
+    @include bp ("lg") {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color:$lightgrey-bkg;
+        .choice {
+            display:flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            width: 33%;
+            background-color:$lightgrey-bkg;
+            padding: 30px;
+            h5 {
+                @include h6;
+                border-bottom: 4px solid $mint;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                width: 30px;
+            }
+            .card {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                align-items: center;
+                background-color: $blanc;
+                font-family: 'Roboto';
+                font-size: 13px;
+                margin: 10px 0px;
+                .menu_describ {
+                    padding: 15px;
+                    h4 {
+                        @include h4;
+                        margin-bottom:5px;
+                    }
+                }
+                .check {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    cursor: pointer;
+                    h4 {
+                        @include h4;
+                    }
+                }
+                .checked {
+                    display: flex;
+                    width: 40px;
+                    height: 100%;
+                    text-align: center;
+                    background-color: $mint;
+                    color: $blanc;
+                    font-size: 20px;
+                    border-radius: 0px 10px 10px 0px;
+                    padding-top: 10px;
+                }
+                .unchecked {
+                    margin-right: 10px;
+                }
+                .check input[type="checkbox"],.checked {
+                    display: none;
+                }
+                .check input[type="checkbox"]:hover ~ .checked {
+                    display: inline-block;
+                } 
+                .check input[type="checkbox"]:hover ~ .unchecked {
+                    padding-top: 14px;
+                    margin-right: 10px;
+                } 
+                .check input[type="checkbox"]:checked ~ .checked {
+                    display: inline-block;
+                }
+                .check input[type="checkbox"]:checked ~ .unchecked {
+                    padding-top: 14px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    @include bp ("sm") {
+        .choice {
+                width: 100%;
+        }
+    }
+}

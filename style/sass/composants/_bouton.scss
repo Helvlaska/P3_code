@@ -15,7 +15,10 @@
 
 #explore {
     button {
-        @include violet-btn;
+        font-family:'Roboto';
+        color: #FFFFFF;
+        background: linear-gradient($secondary, $primary);
+        border: none;
         border-radius: 20px;
         padding: 10px 15px;
         &:hover {
@@ -31,7 +34,10 @@
     background-color: $lightgrey-bkg;
     padding: 30px 0px;
     button {
-        @include violet-btn;
+        font-family:'Roboto';
+        color: #FFFFFF;
+        background: linear-gradient($secondary, $primary);
+        border: none;
         border-radius: 20px;
         padding: 10px 25px;
         &:hover {

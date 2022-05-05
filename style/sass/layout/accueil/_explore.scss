@@ -5,7 +5,9 @@
     background-color:$lightgrey-bkg;
     padding:40px;
     h2 {
-        @include h2;
+        font-family: 'Roboto';
+        font-size:23px;
+        font-weight: 900;
     }
     p {
         font-size: 14px;

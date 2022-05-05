@@ -9,7 +9,8 @@
         z-index:1;
         margin-top: -30px;
         h1 {
-            @include h1;
+            font-family: 'Shrikhand';
+            font-size: 35px;
         }
         .coeur {
             font-size: 35px;
@@ -20,11 +21,19 @@
         }
         .coeur input[type="checkbox"]:checked ~ .coeur-plein {
             display: inline-block;
-            @include coeur-violet;
+            background: linear-gradient(to top, $primary 0%,$secondary 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .coeur input[type="checkbox"]:hover ~ .coeur-plein {
             display: inline-block;
-            @include coeur-violet;
+            background: linear-gradient(to top, $primary 0%,$secondary 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .coeur input[type="checkbox"]:checked ~ .coeur-vide {
             display: none;

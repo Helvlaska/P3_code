@@ -12,8 +12,9 @@
             background-color:$lightgrey-bkg;
             padding: 30px;
             h5 {
-                @include h6;
-                border-bottom: 4px solid $mint;
+                font-family: 'Roboto';
+                font-size: 20px;
+                border-bottom: 4px solid $tertiary;
                 margin-bottom: 15px;
                 padding-bottom: 5px;
                 width: 30px;
@@ -25,14 +26,16 @@
                 height: auto;
                 border-radius: 10px;
                 align-items: center;
-                background-color: $blanc;
+                background-color: #FFFFFF;
                 font-family: 'Roboto';
                 font-size: 13px;
                 margin: 10px 0px;
                 .menu_describ {
                     padding: 15px;
                     h4 {
-                        @include h4;
+                        font-family:'Roboto';
+                        font-size:15px;
+                        font-weight: bold;
                         margin-bottom:5px;
                     }
                 }
@@ -42,7 +45,9 @@
                     align-items: center;
                     cursor: pointer;
                     h4 {
-                        @include h4;
+                        font-family:'Roboto';
+                        font-size:15px;
+                        font-weight: bold;
                     }
                 }
                 .checked {
@@ -50,8 +55,8 @@
                     width: 40px;
                     height: 100%;
                     text-align: center;
-                    background-color: $mint;
-                    color: $blanc;
+                    background-color: $tertiary;
+                    color: #FFFFFF;
                     font-size: 20px;
                     border-radius: 0px 10px 10px 0px;
                     padding-top: 10px;

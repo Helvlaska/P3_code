@@ -1,6 +1,3 @@
-/*"sm": 360px,
-    "md": 768px,
-    "lg": 992px,*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -237,6 +234,13 @@ form input {
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  #tutorial ul h3 {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 900;
+    width: 100%;
+    margin: 20px 0px;
+  }
   #tutorial ul .card {
     width: 30%;
   }
@@ -312,6 +316,7 @@ form input {
     font-size: 20px;
     font-weight: 900;
     width: 100%;
+    margin-bottom: 20px;
   }
   #accueil-menu ul li {
     width: 35%;
@@ -381,16 +386,6 @@ form input {
 @media screen and (max-width: 768px) {
   #accueil-menu ul li {
     width: 100%;
-  }
-  #accueil-menu ul li .bloc-new--first {
-    top: 113%;
-    bottom: auto;
-    left: 68%;
-  }
-  #accueil-menu ul li .bloc-new--second {
-    top: 151%;
-    bottom: auto;
-    right: 11%;
   }
 }
 

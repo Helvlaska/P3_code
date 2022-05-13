@@ -1,3 +1,11 @@
+@keyframes grossir {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
 @keyframes slide_left {
   0% {
     margin-left: 100%;
@@ -547,9 +555,8 @@ footer li a {
     width: 100%;
   }
   #menu .choice .card .check {
-    display: none;
     height: 100%;
-    width: 10%;
+    width: 0;
     border-radius: 0px 10px 10px 0px;
   }
   #menu .choice .card .container {
@@ -564,7 +571,9 @@ footer li a {
     height: 100%;
   }
   #menu .choice .card:hover .check {
-    display: block;
+    animation-name: grossir;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
   }
   #menu .choice .card:hover .container {
     animation-name: slide_left;

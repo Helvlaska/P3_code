@@ -11,10 +11,16 @@
         h1 {
             font-family: 'Shrikhand';
             font-size: 35px;
+            animation-name:slide_right;
+            animation-duration: 2000ms;
+            animation-timing-function: cubic-bezier(1,0,.66,.98);
         }
         .coeur {
             font-size: 35px;
             cursor: pointer;
+            animation-name:slide_right;
+                animation-duration: 3000ms;
+                animation-timing-function: cubic-bezier(1,0,.66,.98);
         }
         .coeur input[type="checkbox"],.coeur .coeur-plein {
             display: none;
@@ -34,6 +40,7 @@
             -moz-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: remplissage 3000ms backwards;
         }
         .coeur input[type="checkbox"]:checked ~ .coeur-vide {
             display: none;

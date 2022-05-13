@@ -17,12 +17,16 @@
     button {
         font-family:'Roboto';
         color: #FFFFFF;
-        background: linear-gradient($secondary, $primary);
+        background: linear-gradient($gradient);
         border: none;
         border-radius: 20px;
         padding: 10px 15px;
+        cursor: pointer;
+        box-shadow: 3px 6px 4px 2px $box-shadow_card;
+        transition: all 1s;
         &:hover {
-            cursor: pointer;
+            background: linear-gradient($light-gradient);
+            box-shadow: 3px 6px 4px 2px $dark-shadow_card;
         }
     }
 }
@@ -36,10 +40,11 @@
     button {
         font-family:'Roboto';
         color: #FFFFFF;
-        background: linear-gradient($secondary, $primary);
+        background: linear-gradient($gradient);
         border: none;
         border-radius: 20px;
         padding: 10px 25px;
+        box-shadow: 3px 6px 4px 2px $box-shadow_card;
         &:hover {
             cursor: pointer;
         }

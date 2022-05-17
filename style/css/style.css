@@ -48,6 +48,14 @@
     height: 35px;
   }
 }
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -125,6 +133,11 @@ table {
     position: relative;
     right: 40%;
     top: 8px;
+    font-size: 20px;
+    color: black;
+  }
+  #header_menu .return:hover {
+    color: #9356DC;
   }
 }
 @media screen and (max-width: 768px) {
@@ -136,17 +149,31 @@ table {
 #explore button {
   font-family: "Roboto";
   color: #FFFFFF;
+  position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   padding: 10px 15px;
   cursor: pointer;
   box-shadow: 3px 6px 4px 2px #e6e6e6;
-  transition: all 1s;
 }
-#explore button:hover {
-  background: linear-gradient(#ff9ee4, #9b65da);
-  box-shadow: 3px 6px 4px 2px #d3d0d0;
+#explore button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px #e6e6e6;
+  background-color: white;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1000ms;
+}
+#explore button:hover::after {
+  box-shadow: 6px 6px 10px black;
+  opacity: 0.15;
 }
 
 #send {
@@ -159,14 +186,31 @@ table {
 #send button {
   font-family: "Roboto";
   color: #FFFFFF;
+  position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   padding: 10px 25px;
   box-shadow: 3px 6px 4px 2px #e6e6e6;
-}
-#send button:hover {
   cursor: pointer;
+}
+#send button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px #e6e6e6;
+  background-color: white;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1000ms;
+}
+#send button:hover::after {
+  box-shadow: 6px 6px 10px black;
+  opacity: 0.15;
 }
 
 .image {
@@ -308,6 +352,10 @@ form input {
   #tutorial ul .card a:hover i, #tutorial ul .card a:focus i {
     color: #9356DC;
   }
+  #tutorial ul .card a:hover p, #tutorial ul .card a:focus p {
+    transform: scale(5);
+    opacity: 0;
+  }
   #tutorial ul .card a p {
     font-family: "Roboto";
     font-size: 13px;
@@ -319,6 +367,8 @@ form input {
     padding: 3px 6px;
     width: 20px;
     height: 20px;
+    transform: scale(1);
+    transition: all 300ms;
   }
   #tutorial ul .card a div {
     display: flex;
@@ -468,6 +518,12 @@ footer li a {
   text-decoration: none;
   color: #FFFFFF;
 }
+footer li a:hover, footer li a:focus {
+  color: #9356DC;
+}
+footer li a:active {
+  color: #FF79DA;
+}
 
 #menu {
   animation-name: slide_up;
@@ -488,6 +544,18 @@ footer li a {
     background-color: #f6f6f6;
     padding: 30px;
   }
+  #menu .choice--1 {
+    animation: opacity 1500ms backwards;
+    animation-delay: 2250ms;
+  }
+  #menu .choice--2 {
+    animation: opacity 1500ms backwards;
+    animation-delay: 2500ms;
+  }
+  #menu .choice--3 {
+    animation: opacity 1500ms backwards;
+    animation-delay: 2750ms;
+  }
   #menu .choice h5 {
     font-family: "Roboto";
     font-size: 20px;
@@ -495,9 +563,6 @@ footer li a {
     margin-bottom: 15px;
     padding-bottom: 5px;
     width: 30px;
-    animation-name: slide_right;
-    animation-duration: 3000ms;
-    animation-timing-function: cubic-bezier(1, 0, 0.66, 0.98);
   }
   #menu .choice .card {
     display: flex;
@@ -511,6 +576,18 @@ footer li a {
     font-size: 12px;
     margin: 10px 0px;
     cursor: pointer;
+  }
+  #menu .choice .card--1 {
+    animation: opacity 500ms backwards;
+    animation-delay: 2500ms;
+  }
+  #menu .choice .card--2 {
+    animation: opacity 500ms backwards;
+    animation-delay: 2800ms;
+  }
+  #menu .choice .card--3 {
+    animation: opacity 500ms backwards;
+    animation-delay: 3100ms;
   }
   #menu .choice .card .menu_describ {
     display: flex;
@@ -570,6 +647,10 @@ footer li a {
     width: 0;
     height: 100%;
   }
+  #menu .choice .card .container i {
+    position: absolute;
+    opacity: 0;
+  }
   #menu .choice .card:hover .check {
     animation-name: grossir;
     animation-duration: 700ms;
@@ -582,6 +663,8 @@ footer li a {
   }
   #menu .choice .card:hover .container i {
     animation: rotation 500ms linear;
+    position: static;
+    opacity: 1;
   }
 }
 @media screen and (max-width: 768px) {
@@ -604,16 +687,14 @@ footer li a {
   #banniere h1 {
     font-family: "Shrikhand";
     font-size: 35px;
-    animation-name: slide_right;
-    animation-duration: 2000ms;
-    animation-timing-function: cubic-bezier(1, 0, 0.66, 0.98);
+    animation: slide_right 1500ms backwards;
+    animation-delay: 1500ms;
   }
   #banniere .coeur {
     font-size: 35px;
     cursor: pointer;
-    animation-name: slide_right;
-    animation-duration: 3000ms;
-    animation-timing-function: cubic-bezier(1, 0, 0.66, 0.98);
+    animation: slide_right 1500ms backwards;
+    animation-delay: 2000ms;
   }
   #banniere .coeur input[type=checkbox], #banniere .coeur .coeur-plein {
     display: none;

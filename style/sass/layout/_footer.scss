@@ -20,5 +20,11 @@ footer {
     li a {
         text-decoration: none;
         color:#FFFFFF;
+        &:hover, &:focus {
+            color: $primary;
+        }
+        &:active {
+            color: $secondary;
+        }
     }
 }

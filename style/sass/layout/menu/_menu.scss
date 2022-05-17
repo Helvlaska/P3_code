@@ -13,6 +13,18 @@
             width: 33%;
             background-color:$lightgrey-bkg;
             padding: 30px;
+            &--1 {
+                animation: opacity 1500ms backwards;
+                animation-delay: 2250ms;
+            }
+            &--2 {
+                animation: opacity 1500ms backwards;
+                animation-delay: 2500ms;
+            }
+            &--3 {
+                animation: opacity 1500ms backwards;
+                animation-delay: 2750ms;
+            }
             h5 {
                 font-family: 'Roboto';
                 font-size: 20px;
@@ -20,9 +32,6 @@
                 margin-bottom: 15px;
                 padding-bottom: 5px;
                 width: 30px;
-                animation-name:slide_right;
-                animation-duration: 3000ms;
-                animation-timing-function: cubic-bezier(1,0,.66,.98);
             }
             .card {
                 display: flex;
@@ -36,6 +45,18 @@
                 font-size: 12px;
                 margin: 10px 0px;
                 cursor: pointer;
+                &--1 {
+                    animation: opacity 500ms backwards;
+                    animation-delay: 2500ms;
+                }
+                &--2 {
+                    animation: opacity 500ms backwards;
+                    animation-delay: 2800ms;
+                }
+                &--3 {
+                    animation: opacity 500ms backwards;
+                    animation-delay: 3100ms;
+                }
                 .menu_describ {
                     display: flex;
                     justify-content: space-between;
@@ -93,6 +114,10 @@
                     color: white;
                     width: 0;
                     height: 100%;
+                    i {
+                        position: absolute;
+                        opacity: 0;
+                    }
                 }
                 &:hover {
                     .check {
@@ -106,6 +131,8 @@
                         animation-fill-mode: forwards;
                         i {
                             animation: rotation 500ms linear ;
+                            position: static;
+                            opacity: 1;
                         }
                     }
                 }

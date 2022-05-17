@@ -29,18 +29,24 @@
                         i {
                             color: $primary;
                         }
+                        p {
+                            transform: scale(5);
+                            opacity:0;
+                        }
                     }
                     p {
-                    font-family:"Roboto";
-                    font-size: 13px;
-                    position: absolute;
-                    margin: 23px 0px;
-                    border-radius: 20px;
-                    color: #FFFFFF;
-                    background-color: $primary;
-                    padding: 3px 6px;
-                    width: 20px;
-                    height: 20px;
+                        font-family:"Roboto";
+                        font-size: 13px;
+                        position: absolute;
+                        margin: 23px 0px;
+                        border-radius: 20px;
+                        color: #FFFFFF;
+                        background-color: $primary;
+                        padding: 3px 6px;
+                        width: 20px;
+                        height: 20px;
+                        transform: scale(1);
+                        transition: all 300ms;
                     }
                     div {
                         display: flex;

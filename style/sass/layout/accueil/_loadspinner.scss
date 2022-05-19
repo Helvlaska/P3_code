@@ -1,0 +1,42 @@
+#loadspinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: black;
+  animation: apparition 6s linear forwards;
+  .stroke {
+    width: 30%;
+    min-width: 300px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    fill: transparent;
+    stroke-width: 1px;
+    stroke:#ff79da;
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+    animation-delay: 4s;
+    animation: anim 6s ease forwards;
+  }
+  .fill {
+    width: 30%;
+    min-width: 300px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    stroke:transparent;
+    fill:#ff79da;
+    opacity: 0;
+    animation: point 2s ease forwards;
+    animation-delay: 2s;
+  } 
+} 

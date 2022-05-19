@@ -1,5 +1,6 @@
 @import "../sass/utils/variables";
 @import "../sass/utils/mixin";
+@import "../sass/utils/keyframes";
 @import "../sass/utils/breakpoint";
 
 @import "../sass/base/mini-reset";
@@ -9,12 +10,13 @@
 @import "../sass/composants/bouton";
 @import "../sass/composants/images";
 
-@import "../sass/layout/header";
+@import "../sass/layout/commun/header";
+@import "../sass/layout/accueil/loadspinner";
 @import "../sass/layout/accueil/form";
 @import "../sass/layout/accueil/explore";
 @import "../sass/layout/accueil/tutorial";
 @import "../sass/layout/accueil/accueil-menu";
-@import "../sass/layout/footer";
+@import "../sass/layout/commun/footer";
 @import "../sass/layout/menu/menu";
 @import "../sass/layout/menu/banniere";
 

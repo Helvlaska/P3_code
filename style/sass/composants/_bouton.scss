@@ -23,7 +23,7 @@
         font-family:'Roboto';
         color: #FFFFFF;
         position: relative;
-        background: linear-gradient($gradient);
+        background: linear-gradient($gradient-btn);
         border: none;
         border-radius: 20px;
         padding: 10px 15px;
@@ -54,13 +54,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: $lightgrey-bkg;
+    background-color: $background-light;
     padding: 30px 0px;
     button {
         font-family:'Roboto';
         color: #FFFFFF;
         position: relative;
-        background: linear-gradient($gradient);
+        background: linear-gradient($gradient-btn);
         border: none;
         border-radius: 20px;
         padding: 10px 25px;

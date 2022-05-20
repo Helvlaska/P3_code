@@ -2,7 +2,7 @@
     width: 100%;
     font-family:'Roboto';
     text-align:center;
-    background-color:$lightgrey-bkg;
+    background-color:$background-light;
     padding:40px;
     h2 {
         font-family: 'Roboto';
@@ -12,7 +12,7 @@
     p {
         font-size: 14px;
         font-weight: 400;
-        color:$gris-noir;
+        color:$font-dark;
         margin-bottom: 15px;
     }
 }

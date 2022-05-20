@@ -5,13 +5,13 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        background-color:$lightgrey-bkg;
+        background-color:$background-light;
         .choice {
             display:flex;
             flex-wrap: wrap;
             align-content: flex-start;
             width: 33%;
-            background-color:$lightgrey-bkg;
+            background-color:$background-light;
             padding: 30px;
             &--1 {
                 animation: opacity 1500ms backwards;

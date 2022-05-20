@@ -55,9 +55,9 @@
                         margin-left: 10px;
                         width:100%;
                         border-radius: 10px;
-                        background-color: $lightgrey-bkg;
+                        background-color:$background-light;
                         box-shadow: 3px 3px 6px -1px $box-shadow_card;
-                        color: $gris-noir;
+                        color:$font-dark;
                         h4 {
                             font-family:'Roboto';
                             font-size:15px;
@@ -68,7 +68,7 @@
                         i {
                             width: 20px;
                             text-decoration: none;
-                            color:$gris-noir;
+                            color:$font-dark;
                         }
                     }
                 }

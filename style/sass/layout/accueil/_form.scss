@@ -4,8 +4,8 @@
     width:100%;
 }
 @mixin form-style {
-    color:$gris-noir;
-    background-color:$bkg-form;
+    color:$font-dark;
+    background:linear-gradient(0deg,$color-bottom 75%, $color-top 100%);
 }
 @mixin form-font {
     font-family:"Roboto";
@@ -15,7 +15,7 @@
 
 form {
     @include form-bloc;
-    padding: 5px 0px;
+    padding: 10px 0px;
     @include form-style;
     label {
         font-size: 13px;
@@ -25,6 +25,7 @@ form {
         border: none;
         @include form-font;
         text-align: center;
-        @include form-style;
+        background-color: #eaeaea;
+        color:$font-dark;
     }
 }

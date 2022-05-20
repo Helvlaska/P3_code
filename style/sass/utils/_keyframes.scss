@@ -31,3 +31,65 @@
       z-index: -1;
     }
   }
+  @keyframes grossir {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 10%;
+    }
+}
+@keyframes slide_left {
+    0% {
+        margin-left: 100%;
+        width: 0; 
+    }
+    100% {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@keyframes slide_right {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slide_up {
+    0% {
+        margin-top: 500px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes remplissage {
+    0% {
+        height: 0;
+        
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+@keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

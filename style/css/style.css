@@ -4,12 +4,31 @@
 /* couleurs dégradés _form */
 /* couleurs font */
 /* couleur box-shadow */
-@keyframes anim {
+/* position dans la page */
+/* animations loadspinner */
+@keyframes apparition {
+  /* apparition et disparition du loadspinner */
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  99% {
+    opacity: 0;
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes contour {
+  /* dessine le contour du SVG */
   to {
     stroke-dashoffset: 0;
   }
 }
-@keyframes point {
+@keyframes swell {
+  /* néant -> grossissement -> standard */
   0% {
     transform: scale(0);
     opacity: 0;
@@ -23,18 +42,29 @@
     opacity: 1;
   }
 }
-@keyframes apparition {
+/* Animations Coeur */
+@keyframes contours {
+  /*dessine le contour du coeur */
   0% {
-    opacity: 1;
-    z-index: 100;
-  }
-  99% {
-    opacity: 0;
-    z-index: 100;
+    stroke: #9356DC;
   }
   100% {
+    stroke-dashoffset: 0px;
+    stroke: #9356DC;
+  }
+}
+@keyframes boop {
+  /* grossissement du coeur */
+  0% {
+    transform: scale(0);
     opacity: 0;
-    z-index: -1;
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes grossir {
@@ -167,22 +197,15 @@ table {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  #header_menu .return {
-    position: relative;
-    right: 40%;
-    top: 8px;
-    font-size: 20px;
-    color: black;
-  }
-  #header_menu .return:hover {
-    color: #9356DC;
-  }
+#header_menu .return {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-size: 20px;
+  color: black;
 }
-@media screen and (max-width: 768px) {
-  #header_menu .return {
-    right: 20%;
-  }
+#header_menu .return:hover {
+  color: #9356DC;
 }
 
 #explore button {
@@ -252,6 +275,50 @@ table {
   opacity: 0.2;
 }
 
+.coeur {
+  display: flex;
+  position: relative;
+  width: 10%;
+  height: auto;
+}
+.coeur:hover .coeur-vide {
+  stroke-dasharray: 1800px;
+  stroke-dashoffset: 1800px;
+  animation: contours 1000ms linear forwards;
+}
+.coeur:hover .coeur-plein {
+  animation: boop 1000ms linear forwards;
+  animation-delay: 1000ms;
+}
+.coeur .box {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.coeur .coeur-vide {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20px;
+}
+.coeur .coeur-plein {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  stroke: transparent;
+  fill: url(#gradient);
+  opacity: 0;
+}
+
 .image {
   display: inline-flex;
   justify-content: end;
@@ -307,6 +374,7 @@ table {
 #header_menu {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 100%;
   padding: 20px;
 }
@@ -320,41 +388,43 @@ table {
   height: 100%;
   opacity: 0.9;
   background-color: black;
-  animation: apparition 6s linear forwards;
+  animation: apparition 6000ms linear forwards;
 }
 #loadspinner .stroke {
-  width: 30%;
-  min-width: 300px;
-  height: 100px;
+  /*centre un bloc en position: absolute */
   position: absolute;
   margin: auto;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  width: 30%;
+  min-width: 300px;
+  height: 100px;
   fill: transparent;
   stroke-width: 1px;
-  stroke: #ff79da;
+  stroke: #FF79DA;
   stroke-dasharray: 300px;
   stroke-dashoffset: 300px;
-  animation-delay: 4s;
-  animation: anim 6s ease forwards;
+  animation: contour 5000ms ease forwards;
+  animation-delay: 250ms;
 }
 #loadspinner .fill {
-  width: 30%;
-  min-width: 300px;
-  height: 100px;
+  /*centre un bloc en position: absolute */
   position: absolute;
   margin: auto;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  width: 30%;
+  min-width: 300px;
+  height: 100px;
   stroke: transparent;
-  fill: #ff79da;
+  fill: #FF79DA;
   opacity: 0;
-  animation: point 2s ease forwards;
-  animation-delay: 2s;
+  animation: swell 3250ms ease forwards;
+  animation-delay: 2400ms;
 }
 
 form {
@@ -432,10 +502,6 @@ form input {
   #tutorial ul .card a:hover i, #tutorial ul .card a:focus i {
     color: #9356DC;
   }
-  #tutorial ul .card a:hover p, #tutorial ul .card a:focus p {
-    transform: scale(5);
-    opacity: 0;
-  }
   #tutorial ul .card a p {
     font-family: "Roboto";
     font-size: 13px;
@@ -447,8 +513,6 @@ form input {
     padding: 3px 6px;
     width: 20px;
     height: 20px;
-    transform: scale(1);
-    transition: all 300ms;
   }
   #tutorial ul .card a div {
     display: flex;
@@ -770,44 +834,9 @@ footer li a:active {
     animation: slide_right 1500ms backwards;
     animation-delay: 1500ms;
   }
-  #banniere .coeur {
-    font-size: 35px;
-    cursor: pointer;
-    animation: slide_right 1500ms backwards;
-    animation-delay: 2000ms;
-  }
-  #banniere .coeur input[type=checkbox], #banniere .coeur .coeur-plein {
-    display: none;
-  }
-  #banniere .coeur input[type=checkbox]:checked ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #banniere .coeur input[type=checkbox]:hover ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: remplissage 3000ms backwards;
-  }
-  #banniere .coeur input[type=checkbox]:checked ~ .coeur-vide {
-    display: none;
-  }
-  #banniere .coeur input[type=checkbox]:hover ~ .coeur-vide {
-    display: none;
-  }
 }
 @media screen and (max-width: 768px) {
   #banniere h1 {
-    font-size: 25px;
-  }
-  #banniere .coeur {
     font-size: 25px;
   }
 }

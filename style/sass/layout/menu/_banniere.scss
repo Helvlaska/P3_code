@@ -14,45 +14,11 @@
             animation:slide_right 1500ms backwards;
             animation-delay: 1500ms;
         }
-        .coeur {
-            font-size: 35px;
-            cursor: pointer;
-            animation:slide_right 1500ms backwards;
-            animation-delay: 2000ms;
-        }
-        .coeur input[type="checkbox"],.coeur .coeur-plein {
-            display: none;
-        }
-        .coeur input[type="checkbox"]:checked ~ .coeur-plein {
-            display: inline-block;
-            background: linear-gradient(to top, $primary 0%,$secondary 100%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .coeur input[type="checkbox"]:hover ~ .coeur-plein {
-            display: inline-block;
-            background: linear-gradient(to top, $primary 0%,$secondary 100%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: remplissage 3000ms backwards;
-        }
-        .coeur input[type="checkbox"]:checked ~ .coeur-vide {
-            display: none;
-        }
-        .coeur input[type="checkbox"]:hover ~ .coeur-vide {
-            display: none;
-        }
+        
     }
     @include bp ("sm") {
         h1 {
             font-size: 25px,
-        }
-        .coeur {
-            font-size: 25px;
         }
     }
 }

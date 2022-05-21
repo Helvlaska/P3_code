@@ -1,19 +1,12 @@
 #header_menu {
-    @include bp ("lg") {
-        .return {
-            position: relative;
-            right: 40%;
-            top: 8px;
-            font-size: 20px;
-            color: black;
-            &:hover {
-                color: $primary;
-            }
-        }
-    }
-    @include bp ("sm") {
-        .return {
-            right: 20%;
+    .return {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        font-size: 20px;
+        color: black;
+        &:hover {
+            color: $primary;
         }
     }
 }
@@ -84,6 +77,52 @@
             box-shadow: 6px 6px 10px  black;
             opacity: 0.2;
         }
+    }
+}
+
+.coeur {
+    display: flex;
+    position: relative;
+    width: 10%;
+    height: auto;
+    &:hover {
+      .coeur-vide {
+        stroke-dasharray: 1800px;
+        stroke-dashoffset: 1800px;
+        animation: contours 1000ms linear forwards;
+      }
+      .coeur-plein {
+        animation: boop 1000ms linear forwards;
+        animation-delay: 1000ms;
+      }
+    }
+    .box {
+      position: absolute;
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+    .coeur-vide {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      fill: transparent;
+      stroke: black;
+      stroke-width: 20px;
+    }
+    .coeur-plein {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      stroke: transparent;
+      fill: url(#gradient);
+      opacity: 0;
     }
 }
 

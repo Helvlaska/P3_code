@@ -1,2 +1,12 @@
+/* position dans la page */
 
+@mixin absolute-center {
+    /*centre un bloc en position: absolute */
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
 

@@ -4,39 +4,29 @@
   height: 100%;
   opacity: 0.9;
   background-color: black;
-  animation: apparition 6s linear forwards;
+  animation: apparition 6000ms linear forwards;
   .stroke {
+    @include absolute-center;
     width: 30%;
     min-width: 300px;
     height: 100px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
     fill: transparent;
     stroke-width: 1px;
-    stroke:#ff79da;
+    stroke:$secondary;
     stroke-dasharray: 300px;
     stroke-dashoffset: 300px;
-    animation-delay: 4s;
-    animation: anim 6s ease forwards;
+    animation:contour 5000ms ease forwards;
+    animation-delay: 250ms;
   }
   .fill {
+    @include absolute-center;
     width: 30%;
     min-width: 300px;
     height: 100px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
     stroke:transparent;
-    fill:#ff79da;
+    fill:$secondary;
     opacity: 0;
-    animation: point 2s ease forwards;
-    animation-delay: 2s;
+    animation: swell 3250ms ease forwards;
+    animation-delay: 2400ms;
   } 
 } 

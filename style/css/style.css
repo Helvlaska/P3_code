@@ -217,7 +217,7 @@ table {
   border-radius: 20px;
   padding: 10px 15px;
   cursor: pointer;
-  box-shadow: 3px 6px 4px 2px #c9c9c9;
+  box-shadow: 5px 5px 15px #c9c9c9;
 }
 #explore button::after {
   content: "";
@@ -600,36 +600,6 @@ form input {
   }
   #accueil-menu ul li .describ p {
     font-family: "Roboto";
-  }
-  #accueil-menu ul li .coeur {
-    font-size: 23px;
-    margin-top: 7px;
-    cursor: pointer;
-  }
-  #accueil-menu ul li .coeur input[type=checkbox], #accueil-menu ul li .coeur .coeur-plein {
-    display: none;
-  }
-  #accueil-menu ul li .coeur input[type=checkbox]:checked ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, purple 0%, pink 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #accueil-menu ul li .coeur input[type=checkbox]:hover ~ .coeur-plein {
-    display: inline-block;
-    background: linear-gradient(to top, purple 0%, pink 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #accueil-menu ul li .coeur input[type=checkbox]:checked ~ .coeur-vide {
-    display: none;
-  }
-  #accueil-menu ul li .coeur input[type=checkbox]:hover ~ .coeur-vide {
-    display: none;
   }
 }
 @media screen and (max-width: 768px) {

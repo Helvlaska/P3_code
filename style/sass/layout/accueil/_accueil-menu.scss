@@ -52,36 +52,6 @@
                         font-family: 'Roboto';
                     }
                 }
-                .coeur {
-                    font-size: 23px;
-                    margin-top: 7px;
-                    cursor: pointer;
-                }
-                .coeur input[type="checkbox"],.coeur .coeur-plein {
-                    display: none;
-                }
-                .coeur input[type="checkbox"]:checked ~ .coeur-plein {
-                    display: inline-block;
-                    background: linear-gradient(to top, purple 0%,pink 100%);
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                .coeur input[type="checkbox"]:hover ~ .coeur-plein {
-                    display: inline-block;
-                    background: linear-gradient(to top, purple 0%,pink 100%);
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                .coeur input[type="checkbox"]:checked ~ .coeur-vide {
-                    display: none;
-                }
-                .coeur input[type="checkbox"]:hover ~ .coeur-vide {
-                    display: none;
-                }
             }
         }
     }          

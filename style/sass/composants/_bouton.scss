@@ -59,9 +59,7 @@
       }
     }
     .box {
-      position: absolute;
-      height: 0;
-      width: 0;
+      @include absolute-center;
       opacity: 0;
     }
     .coeur-vide {
@@ -77,5 +75,31 @@
       opacity: 0;
     }
 }
+
+.check {
+  height: 100%;
+  width: 0;
+  border-radius: 0px 10px 10px 0px;
+  .box {
+    @include absolute-center;
+    opacity: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tertiary;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 18px;
+    color: white;
+    width: 0;
+    height: 100%;
+    .icon {
+      position: absolute;
+      opacity: 0;
+    }
+  }
+}
+
 
 

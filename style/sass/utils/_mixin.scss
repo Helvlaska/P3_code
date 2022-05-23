@@ -64,3 +64,11 @@
 @mixin box-shadow {
     box-shadow: 5px 5px 15px $box-shadow;
 }
+
+/* TEXTE RACCOURCI "..." */
+
+@mixin text-cut {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

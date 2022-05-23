@@ -55,16 +55,38 @@
     transform: scale(1.1);
   }
 }
-
-  @keyframes grossir {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 10%;
-    }
+@keyframes opacity {
+  /* menu/_banniere/title */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide_up {
+  /* bloc glisse vers le haut de la page */
+  /* menu/_menu */
+  0% {
+      margin-top: 500px;
+  }
+  100% {
+      margin-top: 0px;
+  }
+}
+@keyframes grow-x {
+  /* fait grandir un bloc dans la largeur */
+  /* sass/bouton/check */
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
 }
 @keyframes slide_left {
+  /* bloc glisse vers la gauche */
+  /* sass/bouton/check */
     0% {
         margin-left: 100%;
         width: 0; 
@@ -74,47 +96,15 @@
         width: 100%;
     }
 }
-@keyframes slide_right {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes slide_up {
-    0% {
-        margin-top: 500px;
-    }
-    100% {
-        margin-top: 0px;
-    }
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0turn);
-    }
-    100% {
-        transform: rotate(1turn);
-    }
-}
-
-@keyframes remplissage {
-    0% {
-        height: 0;
-        
-    }
-
-    100% {
-        height: 35px;
-    }
-}
-@keyframes opacity {
-    0% {
+@keyframes turn {
+  /* fait tourner l'élément d'une rotation */
+  /* sass/bouton/check */
+  0% {
+      transform: rotate(0turn);
       opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
+  100% {
+      transform: rotate(1turn);
+      opacity: 1;
+  }
+}

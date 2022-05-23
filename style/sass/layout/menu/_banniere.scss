@@ -1,24 +1,26 @@
-#banniere {
-    @include bp ("lg") {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 35px 35px 0px 35px;
-        border-radius: 35px 35px 0px 0px;
-        background-color:$background-light;
-        z-index:1;
-        margin-top: -30px;
-        h1 {
-            font-family: 'Shrikhand';
+.banniere {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 35px 35px 0px 35px;
+    border-radius: 35px 35px 0px 0px;
+    background-color:$background-light;
+    z-index:1;
+    margin-top: -30px;
+    &__title {
+        @include bp ("lg") {
             font-size: 35px;
-            animation:slide_right 1500ms backwards;
-            animation-delay: 1500ms;
         }
-        
+        @include bp ("sm") {
+            font-size: 25px;
+        }
+        font-family: 'Shrikhand';
+        animation: opacity 1500ms backwards;
+        animation-delay: 1500ms;
     }
-    @include bp ("sm") {
-        h1 {
-            font-size: 25px,
-        }
+    .coeur {
+        animation: opacity 1500ms backwards;
+        animation-delay: 2000ms;
     }
 }
+   

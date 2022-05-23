@@ -8,6 +8,7 @@
 /*DEGRADE BACKGROUND */
 /* GRADIENT BTN */
 /* BOX-SHADOW */
+/* TEXTE RACCOURCI "..." */
 @keyframes apparition {
   /* apparition et disparition */
   /* _loadspinner */
@@ -65,7 +66,28 @@
     transform: scale(1.1);
   }
 }
-@keyframes grossir {
+@keyframes opacity {
+  /* menu/_banniere/title */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide_up {
+  /* bloc glisse vers le haut de la page */
+  /* menu/_menu */
+  0% {
+    margin-top: 500px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@keyframes grow-x {
+  /* fait grandir un bloc dans la largeur */
+  /* sass/bouton/check */
   0% {
     width: 0;
   }
@@ -74,6 +96,8 @@
   }
 }
 @keyframes slide_left {
+  /* bloc glisse vers la gauche */
+  /* sass/bouton/check */
   0% {
     margin-left: 100%;
     width: 0;
@@ -83,43 +107,15 @@
     width: 100%;
   }
 }
-@keyframes slide_right {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes slide_up {
-  0% {
-    margin-top: 500px;
-  }
-  100% {
-    margin-top: 0px;
-  }
-}
-@keyframes rotation {
+@keyframes turn {
+  /* fait tourner l'élément d'une rotation */
+  /* sass/bouton/check */
   0% {
     transform: rotate(0turn);
+    opacity: 0;
   }
   100% {
     transform: rotate(1turn);
-  }
-}
-@keyframes remplissage {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 35px;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }
@@ -301,9 +297,13 @@ table {
   animation-delay: 1000ms;
 }
 .coeur .box {
+  /*centre un bloc en position: absolute */
   position: absolute;
-  height: 0;
-  width: 0;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   opacity: 0;
 }
 .coeur .coeur-vide {
@@ -328,6 +328,37 @@ table {
   bottom: 0;
   stroke: transparent;
   fill: url(#gradient);
+  opacity: 0;
+}
+
+.check {
+  height: 100%;
+  width: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+.check .box {
+  /*centre un bloc en position: absolute */
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.check .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 18px;
+  color: white;
+  width: 0;
+  height: 100%;
+}
+.check .container .icon {
+  position: absolute;
   opacity: 0;
 }
 
@@ -599,6 +630,7 @@ table {
   box-shadow: 5px 5px 15px #c9c9c9;
   margin-bottom: 5%;
   border-radius: 15px;
+  /* coeur: sass/composants/bouton/coeur */
 }
 @media screen and (max-width: 1400px) {
   .accueil-menu__card {
@@ -615,6 +647,9 @@ table {
     width: 100%;
   }
 }
+.accueil-menu__card:hover, .accueil-menu__card:focus {
+  animation: swell-focus 400ms linear forwards;
+}
 .accueil-menu__card .bloc-new {
   position: absolute;
   right: 20px;
@@ -630,6 +665,7 @@ table {
 .accueil-menu__card .describ {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   font-family: "Roboto";
   padding: 15px 20px 15px 15px;
 }
@@ -672,176 +708,157 @@ table {
   margin-right: 5px;
 }
 
-#menu {
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f6f6f6;
   animation-name: slide_up;
   animation-duration: 2000ms;
 }
+
+.choice {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: #f6f6f6;
+  padding: 30px;
+}
 @media screen and (max-width: 1400px) {
-  #menu {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #f6f6f6;
-  }
-  #menu .choice {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+  .choice {
     width: 33%;
-    background-color: #f6f6f6;
-    padding: 30px;
-  }
-  #menu .choice--1 {
-    animation: opacity 1500ms backwards;
-    animation-delay: 2250ms;
-  }
-  #menu .choice--2 {
-    animation: opacity 1500ms backwards;
-    animation-delay: 2500ms;
-  }
-  #menu .choice--3 {
-    animation: opacity 1500ms backwards;
-    animation-delay: 2750ms;
-  }
-  #menu .choice h5 {
-    font-family: "Roboto";
-    font-size: 20px;
-    border-bottom: 4px solid #99E2D0;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    width: 30px;
-  }
-  #menu .choice .card {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    align-items: center;
-    background-color: #FFFFFF;
-    font-family: "Roboto";
-    font-size: 12px;
-    margin: 10px 0px;
-    cursor: pointer;
-  }
-  #menu .choice .card--1 {
-    animation: opacity 500ms backwards;
-    animation-delay: 2500ms;
-  }
-  #menu .choice .card--2 {
-    animation: opacity 500ms backwards;
-    animation-delay: 2800ms;
-  }
-  #menu .choice .card--3 {
-    animation: opacity 500ms backwards;
-    animation-delay: 3100ms;
-  }
-  #menu .choice .card .menu_describ {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 75%;
-    padding: 15px;
-  }
-  #menu .choice .card .menu_describ h4 {
-    width: 100%;
-    height: 50%;
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  #menu .choice .card .menu_describ p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  #menu .choice .card .prix {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    font-size: 15px;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  #menu .choice .card .box {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-  #menu .choice .card .box:checked ~ .container {
-    width: 100%;
-  }
-  #menu .choice .card .check {
-    height: 100%;
-    width: 0;
-    border-radius: 0px 10px 10px 0px;
-  }
-  #menu .choice .card .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #99E2D0;
-    border-radius: 0px 10px 10px 0px;
-    font-size: 18px;
-    color: white;
-    width: 0;
-    height: 100%;
-  }
-  #menu .choice .card .container i {
-    position: absolute;
-    opacity: 0;
-  }
-  #menu .choice .card:hover .check {
-    animation-name: grossir;
-    animation-duration: 700ms;
-    animation-fill-mode: forwards;
-  }
-  #menu .choice .card:hover .container {
-    animation-name: slide_left;
-    animation-duration: 700ms;
-    animation-fill-mode: forwards;
-  }
-  #menu .choice .card:hover .container i {
-    animation: rotation 500ms linear;
-    position: static;
-    opacity: 1;
   }
 }
 @media screen and (max-width: 768px) {
-  #menu .choice {
+  .choice {
     width: 100%;
   }
+}
+.choice--1 {
+  animation: opacity 1500ms backwards;
+  animation-delay: 2250ms;
+}
+.choice--2 {
+  animation: opacity 1500ms backwards;
+  animation-delay: 2500ms;
+}
+.choice--3 {
+  animation: opacity 1500ms backwards;
+  animation-delay: 2750ms;
+}
+.choice__title {
+  font-family: "Roboto";
+  font-size: 20px;
+  border-bottom: 4px solid #99E2D0;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  width: 30px;
 }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #FFF;
+  font-family: "Roboto";
+  font-size: 12px;
+  margin: 10px 0px;
+  box-shadow: 5px 5px 15px #c9c9c9;
+  cursor: pointer;
+}
+.card--1 {
+  animation: opacity 500ms backwards;
+  animation-delay: 2500ms;
+}
+.card--2 {
+  animation: opacity 500ms backwards;
+  animation-delay: 2800ms;
+}
+.card--3 {
+  animation: opacity 500ms backwards;
+  animation-delay: 3100ms;
+}
+.card--4 {
+  animation: opacity 500ms backwards;
+  animation-delay: 3400ms;
+}
+.card:hover .check, .card:focus .check {
+  animation: grow-x 700ms linear forwards;
+}
+.card:hover .container, .card:focus .container {
+  animation: slide_left 600ms forwards;
+}
+.card:hover .container .icon, .card:focus .container .icon {
+  animation: turn 600ms linear;
+  position: static;
+  opacity: 1;
+}
+
+.describ {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 75%;
+  padding: 15px;
+}
+.describ__title {
+  width: 100%;
+  height: 50%;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.describ__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.banniere {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 35px 35px 0px 35px;
+  border-radius: 35px 35px 0px 0px;
+  background-color: #f6f6f6;
+  z-index: 1;
+  margin-top: -30px;
+}
+.banniere__title {
+  font-family: "Shrikhand";
+  animation: opacity 1500ms backwards;
+  animation-delay: 1500ms;
+}
 @media screen and (max-width: 1400px) {
-  #banniere {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 35px 35px 0px 35px;
-    border-radius: 35px 35px 0px 0px;
-    background-color: #f6f6f6;
-    z-index: 1;
-    margin-top: -30px;
-  }
-  #banniere h1 {
-    font-family: "Shrikhand";
+  .banniere__title {
     font-size: 35px;
-    animation: slide_right 1500ms backwards;
-    animation-delay: 1500ms;
   }
 }
 @media screen and (max-width: 768px) {
-  #banniere h1 {
+  .banniere__title {
     font-size: 25px;
   }
+}
+.banniere .coeur {
+  animation: opacity 1500ms backwards;
+  animation-delay: 2000ms;
 }
 
 /*# sourceMappingURL=style.css.map */

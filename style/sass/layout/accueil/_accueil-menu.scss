@@ -28,6 +28,9 @@
     @include box-shadow;
     margin-bottom: 5%;
     border-radius: 15px;
+    &:hover, &:focus {
+        animation: swell-focus 400ms linear forwards;
+    }
     .bloc-new {
         position: absolute;
         right: 20px;
@@ -43,6 +46,7 @@
     .describ {
         display:flex;
         justify-content: space-between;
+        width: 100%;
         font-family: 'Roboto';
         padding: 15px 20px 15px 15px;
         &__title {
@@ -50,4 +54,5 @@
             margin-bottom:5px;
         }
     }
+    /* coeur: sass/composants/bouton/coeur */
 }

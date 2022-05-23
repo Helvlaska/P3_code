@@ -1,61 +1,53 @@
-#accueil-menu {
-    @include bp ("lg") {
+.accueil-menu {
+    @include bloc-list;
+    background-color:$background-light;
+    padding: 30px 20px;
+    ul {
         @include bloc-list;
-        background-color:$background-light;
-        padding: 30px 20px;
-        ul {
-            @include bloc-list;
-            h3 {
-                font-family:'Roboto';
-                font-size: 20px;
-                font-weight: 900;
-                width:100%;
-                margin-bottom: 20px;
-            }
-            li {
-                width: 35%;
-                background-color: #FFFFFF;
-                box-shadow: 3px 3px 6px -1px $box-shadow;
-                margin-bottom: 5%;
-                border-radius: 15px;
-                .bloc-new {
-                    width: fit-content;
-                    height: fit-content;
-                    font-family: "Roboto";
-                    font-size: 15px;
-                    font-weight: bold;
-                    color: #008766;
-                    background-color: #99E2D0;
-                    padding: 8px;
-                    border-radius: 2px;
-                    margin-top: 20px;
-                    margin-right: 20px;
-                }
-                .describ {
-                    display:flex;
-                    justify-content: space-between;
-                    padding: 15px 20px 15px 15px;
-                    h4 {
-                        font-family:'Roboto';
-                        font-size:15px;
-                        font-weight: bold;
-                        margin-bottom:5px;
-                    }
-                    p {
-                        font-family: 'Roboto';
-                    }
-                }
-            }
-        }
-    }          
+    }
+}
+.accueil-menu__title {
+    width:100%;
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.accueil-menu__card {
+    @include bp ("lg") {
+        width: 35%;
+    }
+    @include bp ("md") {
+        width: 45%;
+    }
     @include bp ("sm") {
-        ul {
-            li {
-                width: 100%;
-            }
+        width: 100%;
+    }
+    position: relative;
+    background-color: #FFF;
+    @include box-shadow;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    .bloc-new {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-family: "Roboto";
+        font-size: 15px;
+        font-weight: bold;
+        color: green;
+        background-color: $tertiary;
+        padding: 8px;
+        border-radius: 2px;
+    }
+    .describ {
+        display:flex;
+        justify-content: space-between;
+        font-family: 'Roboto';
+        padding: 15px 20px 15px 15px;
+        &__title {
+            font-weight: bold;
+            margin-bottom:5px;
         }
     }
 }
-
-
-

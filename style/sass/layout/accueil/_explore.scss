@@ -1,18 +1,18 @@
-#explore {
+.explore {
     width: 100%;
-    font-family:'Roboto';
-    text-align:center;
-    background-color:$background-light;
-    padding:40px;
-    h2 {
-        font-family: 'Roboto';
-        font-size:23px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    text-align: center;
+    background-color: $background-light;
+    padding: 40px;
+    &__title {
+        font-size: 23px;
         font-weight: 900;
     }
-    p {
-        font-size: 14px;
+    &__text {
         font-weight: 400;
-        color:$font-dark;
+        color: $font-dark;
         margin: 15px 0px;
     }
+    /* button : sass/composants/_bouton */
 }

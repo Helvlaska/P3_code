@@ -1,13 +1,15 @@
 #header_accueil {
     @include center-bloc;
     padding: 20px;
+    /*.logo = sass/composants/images */
 }
 
 #header_menu {
     @include center-bloc;
     position: relative;
     padding: 20px;
+    /*.return = sass/composants/bouton */
+    /*.logo = sass/composants/images */
 }
 
-/*.logo = sass/composants/images */
-/*.return = sass/composants/bouton */
+

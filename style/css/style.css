@@ -4,11 +4,13 @@
 /* couleurs dégradés _form */
 /* couleurs font */
 /* couleur box-shadow */
-/* position dans la page */
-/*dégradé background */
-/* animations loadspinner */
+/* POSITION DANS LA PAGE */
+/*DEGRADE BACKGROUND */
+/* GRADIENT BTN */
+/* BOX-SHADOW */
 @keyframes apparition {
-  /* apparition et disparition du loadspinner */
+  /* apparition et disparition */
+  /* _loadspinner */
   0% {
     opacity: 1;
     z-index: 100;
@@ -22,50 +24,38 @@
     z-index: -1;
   }
 }
-@keyframes contour {
+@keyframes outline-logo {
   /* dessine le contour du SVG */
+  /* _loadspinner */
   to {
     stroke-dashoffset: 0;
   }
 }
 @keyframes swell {
   /* néant -> grossissement -> standard */
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-/* Animations Coeur */
-@keyframes contours {
-  /*dessine le contour du coeur */
-  0% {
-    stroke: #9356DC;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    stroke: #9356DC;
-  }
-}
-@keyframes boop {
-  /* grossissement du coeur */
+  /* _loadspinner _bouton/coeur */
   0% {
     transform: scale(0);
     opacity: 0;
   }
   50% {
     transform: scale(1.5);
+    opacity: 1;
   }
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes outline-coeur {
+  /*dessine le contour du coeur */
+  /* _bouton/coeur */
+  0% {
+    stroke: #9356DC;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    stroke: #9356DC;
   }
 }
 @keyframes grossir {
@@ -209,33 +199,39 @@ table {
   color: #9356DC;
 }
 
-#explore button {
-  font-family: "Roboto";
-  color: #FFFFFF;
+.explore button {
   position: relative;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #FFF;
   background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
   border: none;
-  border-radius: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
+  border-radius: 25px;
+  padding: 15px 25px;
+  margin-top: 10px;
   box-shadow: 5px 5px 15px #c9c9c9;
+  cursor: pointer;
 }
-#explore button::after {
+.explore button::after {
   content: "";
+  /*centre un bloc en position: absolute */
   position: absolute;
-  top: 0;
+  margin: auto;
   left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0px 0px 0px #c9c9c9;
   background-color: white;
   opacity: 0;
   z-index: 2;
   transition: all 1000ms;
 }
-#explore button:hover::after {
-  box-shadow: 6px 6px 10px black;
+.explore button:hover::after {
+  box-shadow: 5px 5px 15px black;
   opacity: 0.2;
 }
 
@@ -247,24 +243,30 @@ table {
   padding: 30px 0px;
 }
 #send button {
-  font-family: "Roboto";
-  color: #FFFFFF;
   position: relative;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #FFF;
   background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
   border: none;
-  border-radius: 20px;
-  padding: 10px 25px;
-  box-shadow: 3px 6px 4px 2px #c9c9c9;
+  border-radius: 25px;
+  padding: 15px 25px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 15px #c9c9c9;
   cursor: pointer;
 }
 #send button::after {
   content: "";
+  /*centre un bloc en position: absolute */
   position: absolute;
-  top: 0;
+  margin: auto;
   left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0px 0px 0px #c9c9c9;
   background-color: white;
   opacity: 0;
@@ -272,7 +274,7 @@ table {
   transition: all 1000ms;
 }
 #send button:hover::after {
-  box-shadow: 6px 6px 10px black;
+  box-shadow: 5px 5px 15px black;
   opacity: 0.2;
 }
 
@@ -285,10 +287,10 @@ table {
 .coeur:hover .coeur-vide {
   stroke-dasharray: 1800px;
   stroke-dashoffset: 1800px;
-  animation: contours 1000ms linear forwards;
+  animation: outline-coeur 1000ms linear forwards;
 }
 .coeur:hover .coeur-plein {
-  animation: boop 1000ms linear forwards;
+  animation: swell 1000ms linear forwards;
   animation-delay: 1000ms;
 }
 .coeur .box {
@@ -298,23 +300,25 @@ table {
   opacity: 0;
 }
 .coeur .coeur-vide {
+  /*centre un bloc en position: absolute */
   position: absolute;
   margin: auto;
-  top: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
   right: 0;
+  bottom: 0;
   fill: transparent;
   stroke: black;
   stroke-width: 20px;
 }
 .coeur .coeur-plein {
+  /*centre un bloc en position: absolute */
   position: absolute;
   margin: auto;
-  top: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
   right: 0;
+  bottom: 0;
   stroke: transparent;
   fill: url(#gradient);
   opacity: 0;
@@ -372,6 +376,7 @@ table {
   justify-content: center;
   width: 100%;
   padding: 20px;
+  /*.logo = sass/composants/images */
 }
 
 #header_menu {
@@ -381,10 +386,10 @@ table {
   width: 100%;
   position: relative;
   padding: 20px;
+  /*.return = sass/composants/bouton */
+  /*.logo = sass/composants/images */
 }
 
-/*.logo = sass/composants/images */
-/*.return = sass/composants/bouton */
 #loadspinner {
   position: fixed;
   width: 100%;
@@ -409,7 +414,7 @@ table {
   stroke: #FF79DA;
   stroke-dasharray: 300px;
   stroke-dashoffset: 300px;
-  animation: contour 5000ms ease forwards;
+  animation: outline-logo 5000ms ease forwards;
   animation-delay: 250ms;
 }
 #loadspinner .fill {
@@ -452,20 +457,20 @@ form input {
   color: #7e7e7e;
 }
 
-#explore {
+.explore {
   width: 100%;
   font-family: "Roboto";
+  font-size: 14px;
   text-align: center;
   background-color: #f6f6f6;
   padding: 40px;
+  /* button : sass/composants/_bouton */
 }
-#explore h2 {
-  font-family: "Roboto";
+.explore__title {
   font-size: 23px;
   font-weight: 900;
 }
-#explore p {
-  font-size: 14px;
+.explore__text {
   font-weight: 400;
   color: #7e7e7e;
   margin: 15px 0px;

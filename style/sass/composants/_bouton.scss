@@ -11,33 +11,14 @@
     }
 }
 
-#explore {
+.explore {
     button {
-        font-family:'Roboto';
-        color: #FFFFFF;
-        position: relative;
-        @include gradient-btn;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 15px;
-        cursor: pointer;
-        box-shadow: 5px 5px 15px $box-shadow_card;
+        @include custom-btn;
         &::after {
-            content:'';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height:100%;
-            border-radius: 20px;
-            box-shadow: 0px 0px 0px $box-shadow_card;
-            background-color: white;
-            opacity: 0;
-            z-index: 2;
-            transition: all 1000ms;
+            @include custom-btn--after;
         }
         &:hover::after {
-            box-shadow: 6px 6px 10px  black;
+            box-shadow: 5px 5px 15px black;
             opacity: 0.2;
         }
     }
@@ -50,31 +31,12 @@
     background-color: $background-light;
     padding: 30px 0px;
     button {
-        font-family:'Roboto';
-        color: #FFFFFF;
-        position: relative;
-        @include gradient-btn;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 25px;
-        box-shadow: 3px 6px 4px 2px $box-shadow_card;
-        cursor: pointer;
+        @include custom-btn;
         &::after {
-            content:'';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height:100%;
-            border-radius: 20px;
-            box-shadow: 0px 0px 0px $box-shadow_card;
-            background-color: white;
-            opacity: 0;
-            z-index: 2;
-            transition: all 1000ms;
+            @include custom-btn--after;
         }
         &:hover::after {
-            box-shadow: 6px 6px 10px  black;
+            box-shadow: 5px 5px 15px black;
             opacity: 0.2;
         }
     }
@@ -89,10 +51,10 @@
       .coeur-vide {
         stroke-dasharray: 1800px;
         stroke-dashoffset: 1800px;
-        animation: contours 1000ms linear forwards;
+        animation: outline-coeur 1000ms linear forwards;
       }
       .coeur-plein {
-        animation: boop 1000ms linear forwards;
+        animation: swell 1000ms linear forwards;
         animation-delay: 1000ms;
       }
     }
@@ -103,23 +65,13 @@
       opacity: 0;
     }
     .coeur-vide {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      @include absolute-center;
       fill: transparent;
       stroke: black;
       stroke-width: 20px;
     }
     .coeur-plein {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      @include absolute-center;
       stroke: transparent;
       fill: url(#gradient);
       opacity: 0;

@@ -1,7 +1,6 @@
-/* animations loadspinner */
-
 @keyframes apparition {
-  /* apparition et disparition du loadspinner */
+  /* apparition et disparition */
+  /* _loadspinner */
   0% {
     opacity: 1;
     z-index: 100;
@@ -15,20 +14,22 @@
     z-index: -1;
   }
 }
-@keyframes contour {
+@keyframes outline-logo {
   /* dessine le contour du SVG */
+  /* _loadspinner */
   to {
     stroke-dashoffset: 0;
   }
 }
 @keyframes swell {
   /* néant -> grossissement -> standard */
+  /* _loadspinner _bouton/coeur */
   0% {
     transform: scale(0);
     opacity: 0;
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.5);
     opacity: 1;
   }
   100% {
@@ -36,31 +37,15 @@
     opacity: 1;
   }
 }
-
-/* Animations Coeur */
-
-@keyframes contours {
+@keyframes outline-coeur {
   /*dessine le contour du coeur */
+  /* _bouton/coeur */
   0% {
     stroke: $primary; 
   }
   100% {
     stroke-dashoffset: 0px;
     stroke: $primary;
-  }
-}
-@keyframes boop {
-  /* grossissement du coeur */
-  0% {
-    transform:scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }
 

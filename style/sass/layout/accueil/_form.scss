@@ -1,31 +1,21 @@
-@mixin form-bloc {
+.position {
     display: flex;
-    justify-content:center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width:100%;
-}
-@mixin form-style {
-    color:$font-dark;
     @include gradient_form;
-}
-@mixin form-font {
-    font-family:"Roboto";
-    font-size: 13px;
-    font-weight: bold;
-}
-
-form {
-    @include form-bloc;
     padding: 10px 0px;
-    @include form-style;
-    label {
-        font-size: 13px;
-    }
-    input {
+    font-size: 15px;
+    color:$font-dark;
+    &__text {
         width:120px;
         border: none;
-        @include form-font;
-        text-align: center;
-        background-color: #eaeaea;
+        background-color: $color-bottom;
+        margin-left:5px;
+        font-family:"Roboto";
+        font-size: 15px;
+        font-weight: bold;
         color:$font-dark;
     }
 }

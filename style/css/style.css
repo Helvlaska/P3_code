@@ -435,26 +435,26 @@ table {
   animation-delay: 2400ms;
 }
 
-form {
+.position {
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   width: 100%;
-  padding: 10px 0px;
-  color: #7e7e7e;
   background: linear-gradient(0deg, #eaeaea 75%, #cfcfcf 100%);
+  padding: 10px 0px;
+  font-size: 15px;
+  color: #434242;
 }
-form label {
-  font-size: 13px;
-}
-form input {
+.position__text {
   width: 120px;
   border: none;
-  font-family: "Roboto";
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
   background-color: #eaeaea;
-  color: #7e7e7e;
+  margin-left: 5px;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: bold;
+  color: #434242;
 }
 
 .explore {
@@ -472,7 +472,7 @@ form input {
 }
 .explore__text {
   font-weight: 400;
-  color: #7e7e7e;
+  color: #434242;
   margin: 15px 0px;
 }
 
@@ -531,7 +531,7 @@ form input {
     border-radius: 10px;
     background-color: #f6f6f6;
     box-shadow: 3px 3px 6px -1px #c9c9c9;
-    color: #7e7e7e;
+    color: #434242;
   }
   #tutorial ul .card a div h4 {
     font-family: "Roboto";
@@ -543,7 +543,7 @@ form input {
   #tutorial ul .card a div i {
     width: 20px;
     text-decoration: none;
-    color: #7e7e7e;
+    color: #434242;
   }
 }
 @media screen and (max-width: 768px) {

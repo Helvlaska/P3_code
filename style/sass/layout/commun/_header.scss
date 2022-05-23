@@ -1,19 +1,13 @@
 #header_accueil {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    @include center-bloc;
     padding: 20px;
-    img {
-        width: 180px;
-    }
 }
+
 #header_menu {
-    display: flex;
-    justify-content: center;
+    @include center-bloc;
     position: relative;
-    width: 100%;
     padding: 20px;
-    img {
-        width: 180px;
-    }   
 }
+
+/*.logo = sass/composants/images */
+/*.return = sass/composants/bouton */

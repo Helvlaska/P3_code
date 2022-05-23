@@ -1,30 +1,30 @@
-footer {
-    background-color:$background-dark;
-    color:#FFFFFF;
-    font-family:'Roboto';
+.footer {
     padding:20px;
-    h5 {
-        font-family: "Shrikhand";
-        font-size: 18px;
+    background-color:$background-dark;
+    color: #FFF;
+    font-family:'Roboto';
+    &__title {
         margin-bottom: 20px;
+        font-family: "Shrikhand";
+        font-size: 25px; 
     }
-    ul {
-        list-style:none;
+}
+.footer__list {
+    list-style:none;
+}
+.footer__list li {
+    margin-bottom:10px;
+}
+.footer__link {
+    text-decoration: none;
+    color:#FFF;
+    &:hover, &:focus {
+        color: $primary;
     }
-    li {
-        margin-bottom:10px;
-        i {
-            margin-right:5px;
-        }
+    &:active {
+        color: $secondary;
     }
-    li a {
-        text-decoration: none;
-        color:#FFFFFF;
-        &:hover, &:focus {
-            color: $primary;
-        }
-        &:active {
-            color: $secondary;
-        }
+    .icon {
+        margin-right:5px;
     }
 }

@@ -5,7 +5,7 @@
 }
 @mixin form-style {
     color:$font-dark;
-    background:linear-gradient(0deg,$color-bottom 75%, $color-top 100%);
+    @include gradient_form;
 }
 @mixin form-font {
     font-family:"Roboto";

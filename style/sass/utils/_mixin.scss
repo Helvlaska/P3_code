@@ -9,4 +9,18 @@
     right: 0;
     bottom: 0;
 }
+@mixin center-bloc {
+    /*centre un bloc*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
+/*dégradé background */
+
+@mixin gradient_form {
+    background:linear-gradient(0deg,$color-bottom 75%, $color-top 100%);
+}
+@mixin gradient-btn {
+    background: linear-gradient(171deg, $secondary 0%, $primary 100%);
+}

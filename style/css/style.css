@@ -58,6 +58,13 @@
     stroke: #9356DC;
   }
 }
+@keyframes swell-focus {
+  /* effet loupe */
+  /*_card/tutorial-card, _card/accueil-menu-card, _card/menu-card */
+  to {
+    transform: scale(1.1);
+  }
+}
 @keyframes grossir {
   0% {
     width: 0;
@@ -476,80 +483,91 @@ table {
   margin: 15px 0px;
 }
 
+.tutorial {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+}
+.tutorial__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tutorial__title {
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+
 @media screen and (max-width: 1400px) {
-  #tutorial {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    list-style: none;
-    padding: 20px;
-  }
-  #tutorial ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  #tutorial ul h3 {
-    font-family: "Roboto";
-    font-size: 20px;
-    font-weight: 900;
-    width: 100%;
-    margin: 20px 0px;
-  }
-  #tutorial ul .card {
+  .tutorial-card {
     width: 30%;
   }
-  #tutorial ul .card a {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
-    text-decoration: none;
-  }
-  #tutorial ul .card a:hover i, #tutorial ul .card a:focus i {
-    color: #9356DC;
-  }
-  #tutorial ul .card a p {
-    font-family: "Roboto";
-    font-size: 13px;
-    position: absolute;
-    margin: 23px 0px;
-    border-radius: 20px;
-    color: #FFFFFF;
-    background-color: #9356DC;
-    padding: 3px 6px;
-    width: 20px;
-    height: 20px;
-  }
-  #tutorial ul .card a div {
-    display: flex;
-    align-items: baseline;
-    padding: 25px 0px 25px 27px;
-    margin-left: 10px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: #f6f6f6;
-    box-shadow: 3px 3px 6px -1px #c9c9c9;
-    color: #434242;
-  }
-  #tutorial ul .card a div h4 {
-    font-family: "Roboto";
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 30px;
-    text-decoration: none;
-  }
-  #tutorial ul .card a div i {
-    width: 20px;
-    text-decoration: none;
-    color: #434242;
+}
+@media screen and (max-width: 992px) {
+  .tutorial-card {
+    width: 40%;
   }
 }
 @media screen and (max-width: 768px) {
-  #tutorial ul .card {
+  .tutorial-card {
     width: 100%;
   }
+}
+
+.tutorial-card__link {
+  display: flex;
+  width: 100%;
+  position: relative;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.tutorial-card__link:hover, .tutorial-card__link:focus {
+  animation: swell-focus 400ms linear forwards;
+}
+.tutorial-card__link:hover .icon, .tutorial-card__link:focus .icon {
+  color: #9356DC;
+}
+
+.numb {
+  position: absolute;
+  margin: auto;
+  left: 0px;
+  top: 23px;
+  width: 23px;
+  height: 23px;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: #FFF;
+  padding: 5px 7px;
+}
+
+.tutorial-card__content {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  background-color: #f6f6f6;
+  padding: 25px 0px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #c9c9c9;
+  color: #434242;
+}
+.tutorial-card__content .tutorial-card__title {
+  margin-left: 15px;
+}
+.tutorial-card__content .tutorial-card__title .icon {
+  font-size: 16px;
+  margin-left: 25px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -558,15 +576,14 @@ table {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    flex-wrap: wrap;
     background-color: #f6f6f6;
     padding: 30px 20px;
   }
   #accueil-menu ul {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
   }
   #accueil-menu ul h3 {
     font-family: "Roboto";

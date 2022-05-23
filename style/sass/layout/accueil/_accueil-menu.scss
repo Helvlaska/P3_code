@@ -1,17 +1,10 @@
 #accueil-menu {
     @include bp ("lg") {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width:100%;
-        flex-wrap: wrap;
+        @include bloc-list;
         background-color:$background-light;
         padding: 30px 20px;
         ul {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            @include bloc-list;
             h3 {
                 font-family:'Roboto';
                 font-size: 20px;

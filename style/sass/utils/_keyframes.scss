@@ -48,7 +48,13 @@
     stroke: $primary;
   }
 }
-
+@keyframes swell-focus {
+  /* effet loupe */
+  /*_card/tutorial-card, _card/accueil-menu-card, _card/menu-card */
+  to {
+    transform: scale(1.1);
+  }
+}
 
   @keyframes grossir {
     0% {

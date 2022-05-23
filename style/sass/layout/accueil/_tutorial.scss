@@ -1,79 +1,71 @@
-#tutorial {
-    @include bp ("lg") { 
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width:100%;
-        list-style: none;
-        padding:20px;
-        ul {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            h3 {
-                font-family:'Roboto';
-                font-size: 20px;
-                font-weight: 900;
-                width:100%;
-                margin: 20px 0px;
-            }
-            .card {
-                width:30%;
-                a {
-                    display:flex;
-                    width: 100%;
-                    margin-bottom: 20px;
-                    text-decoration: none;
-                    &:hover, &:focus {
-                        i {
-                            color: $primary;
-                        }
-                    }
-                    p {
-                        font-family:"Roboto";
-                        font-size: 13px;
-                        position: absolute;
-                        margin: 23px 0px;
-                        border-radius: 20px;
-                        color: #FFFFFF;
-                        background-color: $primary;
-                        padding: 3px 6px;
-                        width: 20px;
-                        height: 20px;
-                    }
-                    div {
-                        display: flex;
-                        align-items: baseline;
-                        padding: 25px 0px 25px 27px;
-                        margin-left: 10px;
-                        width:100%;
-                        border-radius: 10px;
-                        background-color:$background-light;
-                        box-shadow: 3px 3px 6px -1px $box-shadow;
-                        color:$font-dark;
-                        h4 {
-                            font-family:'Roboto';
-                            font-size:15px;
-                            font-weight: bold;
-                            margin-left: 30px;
-                            text-decoration: none;
-                        }
-                        i {
-                            width: 20px;
-                            text-decoration: none;
-                            color:$font-dark;
-                        }
-                    }
-                }
-            }
-        }
+.tutorial {
+    @include bloc-list;
+    list-style: none;
+    padding:20px;
+    &__list {
+        @include bloc-list;
+    }
+}
+.tutorial__title {
+    width:100%;
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: 900;
+    margin: 20px 0px;
+}
+.tutorial-card {
+    @include bp ("lg") {
+        width:30%;
+    }
+    @include bp ("md") {
+        width: 40%;
     }
     @include bp ("sm") {
-        ul {
-            .card {
-                width: 100%;
-            }
-        } 
+        width: 100%;
+    }
+}
+.tutorial-card__link {
+    display:flex;
+    width: 100%;
+    position: relative;
+    font-family:"Roboto";
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+    &:hover, &:focus {
+        animation: swell-focus 400ms linear forwards;
+        .icon {
+            color: $primary;
+        }
+    }
+}
+.numb {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    top: 23px;
+    width: 23px;
+    height: 23px;
+    background-color: $primary;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 5px 7px; 
+}
+.tutorial-card__content {
+    display: flex;
+    width:100%;
+    align-items: baseline;
+    background-color: $background-light;
+    padding: 25px 0px;
+    border-radius: 10px;
+    @include box-shadow;
+    color:$font-dark;
+    .tutorial-card__title {
+        margin-left: 15px;
+        .icon {
+            font-size: 16px;
+            margin-left: 25px;
+        }
     }
 }

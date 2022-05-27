@@ -820,7 +820,6 @@ table {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 15px;
 }
 .describ__title {
   width: 100%;

@@ -4,7 +4,7 @@
     align-content: center;
     justify-content: center;
     width:100%;
-    @include gradient_form;
+    @include gradient-form;
     padding: 10px 0px;
     font-size: 15px;
     color:$font-dark;

@@ -1,3 +1,5 @@
+/* BOUTON RETOUR ACCUEIL */
+
 #header_menu {
     .return {
         position: absolute;
@@ -11,18 +13,19 @@
     }
 }
 
-.explore {
-    button {
-        @include custom-btn;
-        &::after {
-            @include custom-btn--after;
-        }
-        &:hover::after {
-            box-shadow: 5px 5px 15px black;
-            opacity: 0.2;
-        }
-    }
+/* BOUTONS DEGRADE */
+
+.button {
+  @include custom-btn;
+  &::after {
+    @include custom-btn--after;
+  }
+  &:hover::after {
+    box-shadow: 5px 5px 15px black;
+    opacity: 0.2;
+  }
 }
+
 
 #send {
     display: flex;
@@ -30,7 +33,7 @@
     width: 100%;
     background-color: $background-light;
     padding: 30px 0px;
-    button {
+    .button {
         @include custom-btn;
         &::after {
             @include custom-btn--after;
@@ -41,12 +44,14 @@
         }
     }
 }
+ /* BOUTON LIKE */
 
 .coeur {
     display: flex;
     position: relative;
     width: 10%;
     height: auto;
+    cursor: pointer;
     &:hover {
       .coeur-vide {
         stroke-dasharray: 1800px;
@@ -76,6 +81,8 @@
     }
 }
 
+/* BOUTON SELECTEUR DE PLATS */
+
 .check {
   height: 100%;
   width: 0;
@@ -97,6 +104,7 @@
     .icon {
       position: absolute;
       opacity: 0;
+      /* animations appliquées sur les cards du fichier _menu en :hover */
     }
   }
 }

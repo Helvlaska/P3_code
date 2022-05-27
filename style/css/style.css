@@ -40,7 +40,7 @@
     opacity: 0;
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
     opacity: 1;
   }
   100% {
@@ -185,12 +185,18 @@ table {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 992px) {
+  * {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 768px) {
   * {
     font-size: 16px;
   }
 }
 
+/* BOUTON RETOUR ACCUEIL */
 #header_menu .return {
   position: absolute;
   left: 20px;
@@ -202,7 +208,8 @@ table {
   color: #9356DC;
 }
 
-.explore button {
+/* BOUTONS DEGRADE */
+.button {
   position: relative;
   font-family: "Roboto";
   font-size: 14px;
@@ -215,7 +222,7 @@ table {
   box-shadow: 5px 5px 15px #c9c9c9;
   cursor: pointer;
 }
-.explore button::after {
+.button::after {
   content: "";
   /*centre un bloc en position: absolute */
   position: absolute;
@@ -233,7 +240,7 @@ table {
   z-index: 2;
   transition: all 1000ms;
 }
-.explore button:hover::after {
+.button:hover::after {
   box-shadow: 5px 5px 15px black;
   opacity: 0.2;
 }
@@ -245,7 +252,7 @@ table {
   background-color: #f6f6f6;
   padding: 30px 0px;
 }
-#send button {
+#send .button {
   position: relative;
   font-family: "Roboto";
   font-size: 14px;
@@ -258,7 +265,7 @@ table {
   box-shadow: 5px 5px 15px #c9c9c9;
   cursor: pointer;
 }
-#send button::after {
+#send .button::after {
   content: "";
   /*centre un bloc en position: absolute */
   position: absolute;
@@ -276,16 +283,18 @@ table {
   z-index: 2;
   transition: all 1000ms;
 }
-#send button:hover::after {
+#send .button:hover::after {
   box-shadow: 5px 5px 15px black;
   opacity: 0.2;
 }
 
+/* BOUTON LIKE */
 .coeur {
   display: flex;
   position: relative;
   width: 10%;
   height: auto;
+  cursor: pointer;
 }
 .coeur:hover .coeur-vide {
   stroke-dasharray: 1800px;
@@ -331,6 +340,7 @@ table {
   opacity: 0;
 }
 
+/* BOUTON SELECTEUR DE PLATS */
 .check {
   height: 100%;
   width: 0;
@@ -360,6 +370,7 @@ table {
 .check .container .icon {
   position: absolute;
   opacity: 0;
+  /* animations appliquées sur les cards du fichier _menu en :hover */
 }
 
 .logo {
@@ -409,7 +420,6 @@ table {
 }
 
 #header_accueil {
-  /*centre un bloc*/
   display: flex;
   justify-content: center;
   width: 100%;
@@ -418,7 +428,6 @@ table {
 }
 
 #header_menu {
-  /*centre un bloc*/
   display: flex;
   justify-content: center;
   width: 100%;
@@ -426,6 +435,40 @@ table {
   padding: 20px;
   /*.return = sass/composants/bouton */
   /*.logo = sass/composants/images */
+}
+
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: #FFF;
+  font-family: "Roboto";
+}
+.footer__title {
+  margin-bottom: 20px;
+  font-family: "Shrikhand";
+  font-size: 25px;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__link:hover, .footer__link:focus {
+  color: #9356DC;
+}
+.footer__link:active {
+  color: #FF79DA;
+}
+.footer__link .icon {
+  margin-right: 5px;
 }
 
 #loadspinner {
@@ -512,6 +555,11 @@ table {
   font-weight: 400;
   color: #434242;
   margin: 15px 0px;
+}
+.explore__link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .tutorial {
@@ -670,42 +718,9 @@ table {
   padding: 15px 20px 15px 15px;
 }
 .accueil-menu__card .describ__title {
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-.footer {
-  padding: 20px;
-  background-color: #353535;
-  color: #FFF;
-  font-family: "Roboto";
-}
-.footer__title {
-  margin-bottom: 20px;
-  font-family: "Shrikhand";
-  font-size: 25px;
-}
-
-.footer__list {
-  list-style: none;
-}
-
-.footer__list li {
-  margin-bottom: 10px;
-}
-
-.footer__link {
-  text-decoration: none;
-  color: #FFF;
-}
-.footer__link:hover, .footer__link:focus {
-  color: #9356DC;
-}
-.footer__link:active {
-  color: #FF79DA;
-}
-.footer__link .icon {
-  margin-right: 5px;
 }
 
 .menu {
@@ -800,7 +815,11 @@ table {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 75%;
+  width: 85%;
+  padding: 15px 0px 15px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 15px;
 }
 .describ__title {
@@ -828,7 +847,18 @@ table {
   height: 100%;
   font-size: 15px;
   font-weight: bold;
-  margin-right: 10px;
+  margin: 0px 10px;
+}
+
+.send {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 30px 0px;
+}
+.send__link {
+  text-decoration: none;
 }
 
 .banniere {

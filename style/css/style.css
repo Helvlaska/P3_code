@@ -617,11 +617,14 @@ table {
 .tutorial-card__link:hover .icon, .tutorial-card__link:focus .icon {
   color: #9356DC;
 }
+.tutorial-card__link:hover .tutorial-card__content, .tutorial-card__link:focus .tutorial-card__content {
+  background-color: rgba(246, 246, 246, 0.7);
+}
 
 .numb {
   position: absolute;
   margin: auto;
-  left: 0px;
+  left: -13px;
   top: 23px;
   width: 23px;
   height: 23px;
@@ -629,6 +632,7 @@ table {
   border-radius: 20px;
   color: #FFF;
   padding: 5px 7px;
+  z-index: 2;
 }
 
 .tutorial-card__content {
@@ -636,13 +640,14 @@ table {
   width: 100%;
   align-items: baseline;
   background-color: #f6f6f6;
-  padding: 25px 0px 25px 23px;
+  padding: 25px 0px 25px 15px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px #c9c9c9;
   color: #434242;
+  z-index: 1;
 }
 .tutorial-card__content .tutorial-card__title {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 .tutorial-card__content .icon {
   font-size: 16px;

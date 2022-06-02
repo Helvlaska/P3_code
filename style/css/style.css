@@ -618,7 +618,7 @@ table {
   color: #9356DC;
 }
 .tutorial-card__link:hover .tutorial-card__content, .tutorial-card__link:focus .tutorial-card__content {
-  background-color: rgba(246, 246, 246, 0.7);
+  background-color: rgba(147, 86, 220, 0.2);
 }
 
 .numb {
